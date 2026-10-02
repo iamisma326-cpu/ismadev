@@ -1,0 +1,91 @@
+/* Decoración flotante por sección — variantes de estrellas, cruces,
+   círculos punteados y puntos (mismo lenguaje GFX del hero) */
+
+.section-deco {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.sdeco {
+  position: absolute;
+}
+
+/* Estrella de 4 puntas con parpadeo */
+.sdeco--star {
+  color: var(--accent);
+  animation: sdeco-twinkle 4.5s ease-in-out infinite;
+}
+
+.sdeco--violet {
+  color: var(--decor-violet);
+}
+
+/* Cruz "+" */
+.sdeco--plus {
+  width: 13px;
+  height: 13px;
+  background:
+    linear-gradient(var(--accent), var(--accent)) center / 100% 1.4px
+      no-repeat,
+    linear-gradient(var(--accent), var(--accent)) center / 1.4px 100% no-repeat;
+  opacity: 0.35;
+}
+
+/* Punto suelto */
+.sdeco--dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0.3;
+}
+
+.sdeco--violet-bg {
+  background: var(--decor-violet);
+}
+
+/* Círculo punteado giratorio */
+.sdeco--circle {
+  border: 1.5px dashed var(--line-strong);
+  border-radius: 50%;
+  opacity: 0.7;
+  animation: sdeco-spin 65s linear infinite;
+}
+
+@keyframes sdeco-twinkle {
+  0%,
+  100% {
+    transform: scale(0.75) rotate(0deg);
+    opacity: 0.35;
+  }
+  50% {
+    transform: scale(1.1) rotate(20deg);
+    opacity: 0.8;
+  }
+}
+
+@keyframes sdeco-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sdeco--star,
+  .sdeco--circle {
+    animation: none;
+  }
+
+  .sdeco--star {
+    opacity: 0.5;
+  }
+}
+
+/* En móvil la decoración por sección desaparece para no saturar */
+@media (max-width: 720px) {
+  .section-deco {
+    display: none;
+  }
+}

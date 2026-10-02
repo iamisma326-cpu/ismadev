@@ -1,0 +1,227 @@
+/* ============================================================
+   CAPA DECORATIVA DE FONDO — inspirada en GFX anime
+   Vocabulario: lavados de gradiente, halftone, brillos "+", grano
+   ============================================================ */
+
+.bg-decor {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* ---------- Lavados de color (esquinas opuestas) ---------- */
+.bg-wash {
+  position: absolute;
+  width: 70vmax;
+  height: 70vmax;
+  border-radius: 50%;
+}
+
+.bg-wash--blue {
+  top: -28vmax;
+  right: -20vmax;
+  background: radial-gradient(
+    circle,
+    rgba(29, 78, 216, 0.16),
+    transparent 62%
+  );
+}
+
+.bg-wash--violet {
+  bottom: -30vmax;
+  left: -22vmax;
+  background: radial-gradient(
+    circle,
+    rgba(124, 58, 237, 0.13),
+    transparent 62%
+  );
+}
+
+/* Lavado terciario pequeño, centro-izquierda, para profundidad */
+.bg-wash--soft {
+  top: 34%;
+  left: -18vmax;
+  width: 40vmax;
+  height: 40vmax;
+  background: radial-gradient(
+    circle,
+    rgba(96, 165, 250, 0.08),
+    transparent 65%
+  );
+}
+
+html.dark .bg-wash--blue {
+  background: radial-gradient(
+    circle,
+    rgba(96, 165, 250, 0.11),
+    transparent 62%
+  );
+}
+
+html.dark .bg-wash--violet {
+  background: radial-gradient(
+    circle,
+    rgba(167, 139, 250, 0.09),
+    transparent 62%
+  );
+}
+
+html.dark .bg-wash--soft {
+  background: radial-gradient(
+    circle,
+    rgba(96, 165, 250, 0.05),
+    transparent 65%
+  );
+}
+
+/* ---------- Tramas halftone (dos diagonales + parche inferior) ---------- */
+.bg-halftone {
+  position: absolute;
+  background-image: radial-gradient(
+    rgba(29, 78, 216, 0.22) 1.4px,
+    transparent 1.4px
+  );
+  background-size: 15px 15px;
+}
+
+.bg-halftone--tr {
+  top: 0;
+  right: 0;
+  width: 48vmax;
+  height: 48vmax;
+  mask-image: radial-gradient(circle at top right, #000 0%, transparent 70%);
+  -webkit-mask-image: radial-gradient(
+    circle at top right,
+    #000 0%,
+    transparent 70%
+  );
+}
+
+.bg-halftone--bl {
+  bottom: 0;
+  left: 0;
+  width: 38vmax;
+  height: 38vmax;
+  background-size: 19px 19px;
+  mask-image: radial-gradient(circle at bottom left, #000 0%, transparent 68%);
+  -webkit-mask-image: radial-gradient(
+    circle at bottom left,
+    #000 0%,
+    transparent 68%
+  );
+}
+
+/* Parche violeta inferior derecha — contrapunto de color */
+.bg-halftone--violet {
+  bottom: 4%;
+  right: 6%;
+  width: 26vmax;
+  height: 26vmax;
+  background-image: radial-gradient(
+    rgba(124, 58, 237, 0.18) 1.4px,
+    transparent 1.4px
+  );
+  background-size: 18px 18px;
+  mask-image: radial-gradient(circle, #000 0%, transparent 72%);
+  -webkit-mask-image: radial-gradient(circle, #000 0%, transparent 72%);
+}
+
+html.dark .bg-halftone {
+  background-image: radial-gradient(
+    rgba(96, 165, 250, 0.16) 1.4px,
+    transparent 1.4px
+  );
+}
+
+html.dark .bg-halftone--violet {
+  background-image: radial-gradient(
+    rgba(167, 139, 250, 0.12) 1.4px,
+    transparent 1.4px
+  );
+}
+
+/* ---------- Brillos "+" y puntos sueltos ---------- */
+.bg-sparkle {
+  position: absolute;
+  background:
+    linear-gradient(var(--accent), var(--accent)) center / 100% 1.5px
+      no-repeat,
+    linear-gradient(var(--accent), var(--accent)) center / 1.5px 100% no-repeat;
+  opacity: 0.45;
+}
+
+.bg-sparkle--1 {
+  top: 14%;
+  left: 9%;
+  width: 16px;
+  height: 16px;
+}
+
+.bg-sparkle--2 {
+  top: 7%;
+  right: 30%;
+  width: 11px;
+  height: 11px;
+  opacity: 0.35;
+}
+
+.bg-sparkle--3 {
+  top: 42%;
+  right: 4%;
+  width: 18px;
+  height: 18px;
+  opacity: 0.4;
+}
+
+.bg-sparkle--4 {
+  bottom: 24%;
+  left: 3%;
+  width: 12px;
+  height: 12px;
+  opacity: 0.32;
+}
+
+.bg-dot {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--decor-violet);
+  opacity: 0.35;
+}
+
+.bg-dot--1 {
+  top: 26%;
+  right: 11%;
+}
+
+.bg-dot--2 {
+  bottom: 16%;
+  left: 20%;
+  background: var(--accent);
+  opacity: 0.25;
+}
+
+/* ---------- Grano (textura de ruido SVG) ---------- */
+.bg-grain {
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: 0.05;
+}
+
+html.dark .bg-grain {
+  opacity: 0.065;
+}
+
+/* En pantallas pequeñas se reduce la densidad decorativa */
+@media (max-width: 720px) {
+  .bg-halftone--bl,
+  .bg-halftone--violet,
+  .bg-sparkle--3,
+  .bg-dot--1 {
+    display: none;
+  }
+}

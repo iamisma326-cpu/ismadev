@@ -1,0 +1,386 @@
+/* ============================================================
+   DESIGN TOKENS — paleta monocromática inspirada en la referencia
+   ============================================================ */
+:root {
+  /* Escala de grises — tema claro (por defecto) */
+  --bg: #ffffff;
+  --bg-alt: #fafaf9;
+  --surface: #f5f5f4;
+  /* Acento azul: guía la mirada en eyebrows, numeración, hovers y detalles */
+  --accent: #1d4ed8;
+  --accent-soft: rgba(29, 78, 216, 0.08);
+  /* Acompañante violeta del azul para elementos decorativos */
+  --decor-violet: #7c3aed;
+  /* Jerarquía tonal espejo del modo oscuro: display headings al negro
+     más profundo, títulos de cards un paso más suave que el texto base */
+  --ink: #222222;
+  --ink-strong: #0d0d0d;
+  --ink-mid: #3d3d3d;
+  --ink-soft: #6b6b6b;
+  --ink-faint: #9c9c9c;
+  --line: #e5e5e5;
+  --line-strong: #d4d4d4;
+
+  /* Botones pill negros (como la referencia) */
+  --btn-bg: #222222;
+  --btn-ink: #ffffff;
+
+  /* Tipografía */
+  --font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+
+  /* Ritmo */
+  --container: 1200px;
+  --gutter: clamp(1.25rem, 4vw, 2.5rem);
+  --section-pad: clamp(4.5rem, 10vw, 8rem);
+  --radius: 18px;
+  --radius-sm: 10px;
+
+  /* Movimiento */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --speed: 0.5s;
+
+  /* Sombra muy sutil (mantener mínimo) */
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 8px 32px rgba(0, 0, 0, 0.05);
+}
+
+html.dark {
+  --bg: #111111;
+  --bg-alt: #141414;
+  --surface: #1a1a1a;
+  /* Azul más claro para contraste sobre fondo oscuro */
+  --accent: #60a5fa;
+  --accent-soft: rgba(96, 165, 250, 0.12);
+  --decor-violet: #a78bfa;
+  /* Jerarquía tonal: headings al máximo brillo, texto base atenuado
+     para reducir el deslumbramiento del blanco en grandes bloques */
+  --ink: #e8e8e8;
+  --ink-strong: #fafafa;
+  --ink-mid: #d2d2d2;
+  --ink-soft: #a3a3a3;
+  --ink-faint: #6e6e6e;
+  --line: #262626;
+  --line-strong: #333333;
+
+  --btn-bg: #f5f5f5;
+  --btn-ink: #111111;
+
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 32px rgba(0, 0, 0, 0.35);
+}
+
+/* ============================================================
+   BASE
+   ============================================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+::selection {
+  background: var(--accent);
+  color: #ffffff;
+}
+
+/* Foco visible accesible en el color de acento */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Enlace para saltar al contenido: oculto hasta recibir foco con Tab */
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 100;
+  padding: 0.7rem 1.2rem;
+  background: var(--btn-bg);
+  color: var(--btn-ink);
+  border-radius: 8px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.9rem;
+  transform: translateY(-250%);
+  transition: transform 0.25s var(--ease);
+}
+
+.skip-link:focus-visible {
+  transform: none;
+}
+
+/* Logo escrito (navbar y footer): texto en escritura + cursor */
+.logo-type {
+  display: inline-flex;
+  align-items: baseline;
+}
+
+.logo-dot {
+  color: var(--ink-faint);
+}
+
+.logo-caret {
+  display: inline-block;
+  width: 2px;
+  height: 1.05em;
+  margin-left: 3px;
+  transform: translateY(0.14em);
+  background: var(--accent);
+  animation: caret-blink 0.85s steps(1) infinite;
+}
+
+.logo-caret.is-done {
+  animation: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+@keyframes caret-blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo-caret {
+    display: none;
+  }
+}
+
+/* Líneas de cuadrícula verticales sutiles (textura de la referencia) */
+.grid-lines {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 var(--gutter);
+  max-width: var(--container);
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+
+.grid-lines span {
+  width: 1px;
+  height: 100%;
+  background: var(--line);
+  opacity: 0.55;
+  /* Sincroniza el cambio de color con el fundido del fondo del body:
+     evita el flash de cuadrícula al alternar claro/oscuro */
+  transition: background-color 0.35s ease;
+}
+
+@media (max-width: 720px) {
+  .grid-lines span:nth-child(n + 3) {
+    display: none;
+  }
+}
+
+/* ============================================================
+   UTILIDADES
+   ============================================================ */
+.container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding-inline: var(--gutter);
+}
+
+.section {
+  position: relative;
+  z-index: 1;
+  padding-block: var(--section-pad);
+  overflow: hidden;
+}
+
+.section + .section {
+  border-top: 1px solid var(--line);
+}
+
+/* Palabra gigante de fondo en cada sección (estilo GFX editorial):
+   relleno negro visible en claro, violeta en oscuro, con margen real
+   del borde derecho y por detrás del contenido */
+.section-word {
+  position: absolute;
+  top: clamp(0.5rem, 2vw, 1.75rem);
+  right: clamp(1.5rem, 4vw, 3rem);
+  z-index: 0;
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 10vw, 9rem);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: #0d0d0d;
+  opacity: 0.14;
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+  transition: color 0.35s ease, opacity 0.35s ease;
+}
+
+html.dark .section-word {
+  color: var(--decor-violet);
+  opacity: 0.13;
+}
+
+/* Encabezado de sección: numeración + título grande */
+.section-head {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: clamp(2.5rem, 6vw, 4rem);
+}
+
+.section-head .index {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ink-faint);
+  letter-spacing: 0.08em;
+}
+
+.section-head h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 4.5vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  margin: 0;
+  text-transform: none;
+  /* Título de sección en el acento: azul profundo (claro) / azul claro
+     (oscuro), ambos con contraste AAA sobre sus fondos */
+  color: var(--accent);
+}
+
+/* Botones pill (estilo referencia) */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.85rem 1.6rem;
+  border-radius: 999px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  border: 1px solid transparent;
+  transition: transform 0.25s var(--ease), background-color 0.25s ease,
+    color 0.25s ease, border-color 0.25s ease, opacity 0.25s ease;
+  white-space: nowrap;
+}
+
+.btn svg {
+  flex: none;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn-solid {
+  background: var(--btn-bg);
+  color: var(--btn-ink);
+}
+
+.btn-solid:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+}
+
+.btn-ghost {
+  border-color: var(--line-strong);
+  color: var(--ink);
+}
+
+.btn-ghost:hover {
+  border-color: var(--ink);
+  transform: translateY(-2px);
+}
+
+/* Eyebrow / etiqueta superior */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.eyebrow::before {
+  content: "";
+  width: 2rem;
+  height: 1px;
+  background: var(--accent);
+}
+
+/* Revelado al hacer scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity var(--speed) var(--ease),
+    transform var(--speed) var(--ease);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

@@ -1,0 +1,106 @@
+.certs-subtitle {
+  margin: -1.5rem 0 3rem;
+  max-width: 34rem;
+  color: var(--ink-soft);
+  font-size: 1.02rem;
+}
+
+.certs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.cert-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg);
+  padding: 1.7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  transition: transform 0.35s var(--ease), border-color 0.3s ease,
+    opacity var(--speed) var(--ease);
+}
+
+.cert-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--ink);
+}
+
+.cert-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+/* Medalla en círculo con borde de acento */
+.cert-icon {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1px solid var(--line-strong);
+  color: var(--accent);
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.cert-card:hover .cert-icon {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.cert-year {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  padding: 0.3rem 0.8rem;
+}
+
+.cert-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0;
+  color: var(--ink-mid);
+}
+
+.cert-issuer {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+
+.cert-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: auto;
+  padding-top: 0.9rem;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ink);
+  border-bottom: 1px solid var(--line-strong);
+  padding-bottom: 0.15rem;
+  align-self: flex-start;
+  transition: border-color 0.25s ease, color 0.25s ease;
+}
+
+.cert-link:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+@media (max-width: 780px) {
+  .certs-grid {
+    grid-template-columns: 1fr;
+  }
+}

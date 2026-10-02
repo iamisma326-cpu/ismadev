@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Ismael Espinoza — Desarrollador Web en Lima, Perú. Portafolio de proyectos y aplicaciones de escritorio."
+    />
+    <meta name="author" content="Ismael Espinoza" />
+    <meta property="og:title" content="Ismael Espinoza — Portafolio" />
+    <meta
+      property="og:description"
+      content="Desarrollador Web en Lima, Perú. Portafolio de proyectos y aplicaciones de escritorio."
+    />
+    <meta property="og:type" content="website" />
+    <title>Ismael Espinoza — Portafolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      // Evita flash de tema incorrecto antes de que cargue React
+      (function () {
+        try {
+          var saved = localStorage.getItem("theme");
+          var dark =
+            saved === "dark" ||
+            (!saved &&
+              window.matchMedia("(prefers-color-scheme: dark)").matches);
+          if (dark) document.documentElement.classList.add("dark");
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

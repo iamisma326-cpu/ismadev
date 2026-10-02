@@ -1,0 +1,62 @@
+.tech-marquee {
+  position: relative;
+  z-index: 1;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: var(--bg-alt);
+  overflow: hidden;
+  padding-block: 1.3rem;
+}
+
+.marquee {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: max-content;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  animation: marquee-scroll 32s linear infinite;
+}
+
+/* Píldora circular con solo el icono */
+.marquee-item {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--bg);
+  cursor: default;
+  transition: transform 0.3s var(--ease), border-color 0.3s ease;
+}
+
+.marquee-item svg {
+  opacity: 0.45;
+  transition: opacity 0.3s ease;
+}
+
+.marquee-item:hover {
+  transform: translateY(-4px);
+  border-color: var(--ink);
+}
+
+.marquee-item:hover svg {
+  opacity: 1;
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-50% - 0.5rem));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee {
+    animation: none;
+  }
+}

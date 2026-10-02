@@ -1,0 +1,133 @@
+.skills-subtitle {
+  margin: -1.5rem 0 3rem;
+  max-width: 36rem;
+  color: var(--ink-soft);
+  font-size: 1.02rem;
+}
+
+/* Grid asimétrico: fila 1 tres categorías, fila 2 dos más anchas */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.25rem;
+}
+
+.skill-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg);
+  padding: 1.7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  transition: transform 0.35s var(--ease), border-color 0.3s ease,
+    opacity var(--speed) var(--ease);
+}
+
+.skill-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--ink);
+}
+
+.skill-card--frontend,
+.skill-card--backend,
+.skill-card--desktop {
+  grid-column: span 2;
+}
+
+.skill-card--database,
+.skill-card--tools {
+  grid-column: span 3;
+}
+
+.skill-card-head h3 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.3rem;
+  color: var(--ink-mid);
+}
+
+.skill-number {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  margin-bottom: 0.55rem;
+}
+
+.skill-card-head p {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  line-height: 1.55;
+}
+
+/* Chips con icono + nombre */
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  list-style: none;
+  margin: 0;
+}
+
+.skill-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.95rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: var(--bg);
+  font-family: var(--font-display);
+  font-size: 0.86rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--ink-mid);
+  transition: transform 0.25s var(--ease), border-color 0.25s ease,
+    background-color 0.25s ease;
+  cursor: default;
+}
+
+.skill-chip:hover {
+  transform: translateY(-2px);
+  border-color: var(--ink);
+  background: var(--surface);
+}
+
+.skill-chip svg {
+  flex: none;
+}
+
+/* Iconos con color de marca casi negro (GitHub) */
+:root {
+  --icon-brand: #181717;
+}
+
+html.dark {
+  --icon-brand: #b3b3b3;
+}
+
+@media (max-width: 1020px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skill-card--frontend,
+  .skill-card--backend,
+  .skill-card--desktop,
+  .skill-card--database,
+  .skill-card--tools {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
