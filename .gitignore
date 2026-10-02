@@ -26,3 +26,6 @@ dist-ssr
 # Documentos personales (no subir a repositorios)
 *.pdf
 Ficha*
+
+# Playwright MCP artifacts
+.playwright-mcp

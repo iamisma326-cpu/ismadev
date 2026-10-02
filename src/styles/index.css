@@ -374,6 +374,16 @@ html.dark .section-word {
   transform: none;
 }
 
+/* Si el JS no llega a ejecutarse, .reveal nunca recibe `is-visible` y el
+   contenido quedaria invisible. Con scripting desactivado se muestra todo. */
+@media (scripting: none) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
