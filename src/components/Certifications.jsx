@@ -3,7 +3,11 @@ import { content } from "../data/content";
 import { useReveal } from "../hooks/useReveal";
 import SectionWord from "./SectionWord";
 import SectionDecor from "./SectionDecor";
-import { AwardIcon, ArrowUpRightIcon } from "./icons";
+import {
+  AwardIcon,
+  ArrowUpRightIcon,
+  DownloadIcon,
+} from "./icons";
 import "./Certifications.css";
 
 export default function Certifications() {
@@ -44,11 +48,18 @@ export default function Certifications() {
               <a
                 className="cert-link"
                 href={cert.credential}
-                target={cert.credential !== "#" ? "_blank" : undefined}
+                download={cert.fileName}
+                // Con `download` no se abre una pestaña: el archivo baja
+                // directo. `target` solo aplica a enlaces sin archivo.
+                target={cert.fileName ? undefined : "_blank"}
                 rel="noreferrer"
               >
-                {t.viewCredential}
-                <ArrowUpRightIcon width={15} height={15} />
+                {cert.fileName ? t.downloadCredential : t.viewCredential}
+                {cert.fileName ? (
+                  <DownloadIcon width={15} height={15} />
+                ) : (
+                  <ArrowUpRightIcon width={15} height={15} />
+                )}
               </a>
             </article>
           ))}

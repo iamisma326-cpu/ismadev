@@ -24,6 +24,10 @@ src/
 ├── hooks/useTheme.js      # modo claro/oscuro con persistencia
 ├── hooks/useReveal.js     # animaciones de aparición al hacer scroll
 └── styles/index.css       # tokens de diseño (paleta, tipografía)
+
+public/
+├── favicon.svg
+└── certificado-sql.pdf    # credencial descargable (cert. MySQL)
 ```
 
 ## Cómo editar tu información
@@ -37,11 +41,14 @@ Casi todo se cambia en **un solo archivo**: `src/data/content.js`.
 - **Proyectos, habilidades, educación y stats del hero**: listas dentro de
   cada bloque de idioma.
 - **Foto**: reemplaza `src/assets/isma.png` (mantiene el nombre).
+- **Credenciales**: para que un certificado se descargue, pon su archivo en
+  `public/` y en `content.js` usa `credential: "/archivo.pdf"` más
+  `fileName: "archivo.pdf"`. Con `credential: "#"` no hay archivo asociado.
 
 ## Características
 
 - Bilingüe ES/EN con toggle instantáneo
-- Modo claro/oscuro (respeta la preferencia del sistema)
+- Modo claro/oscuro (arranca en oscuro; recuerda tu elección en el navegador)
 - Marquee de tecnologías, timeline de educación, botones WhatsApp/Gmail
 - Totalmente responsivo con menú móvil
 - Build de producción lista para desplegar (Netlify, Vercel, GitHub Pages)

@@ -142,6 +142,7 @@ export const content = {
       subtitle:
         "Formación complementaria que respalda mis habilidades técnicas.",
       viewCredential: "Ver credencial",
+      downloadCredential: "Descargar credencial",
       items: [
         {
           title: "Desarrollo Web Frontend",
@@ -165,7 +166,8 @@ export const content = {
           title: "Bases de Datos MySQL",
           issuer: "Plataforma online",
           year: "2024",
-          credential: "#",
+          credential: "/certificado-sql.pdf",
+          fileName: "certificado-sql.pdf",
         },
       ],
     },
@@ -311,6 +313,7 @@ export const content = {
       title: "Certifications",
       subtitle: "Complementary training that backs my technical skills.",
       viewCredential: "View credential",
+      downloadCredential: "Download credential",
       items: [
         {
           title: "Frontend Web Development",
@@ -334,7 +337,8 @@ export const content = {
           title: "MySQL Databases",
           issuer: "Online platform",
           year: "2024",
-          credential: "#",
+          credential: "/certificado-sql.pdf",
+          fileName: "certificado-sql.pdf",
         },
       ],
     },

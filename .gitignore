@@ -27,5 +27,8 @@ dist-ssr
 *.pdf
 Ficha*
 
+# ...excepto los certificados que se ofrecen como descarga en el sitio
+!public/certificado-*.pdf
+
 # Playwright MCP artifacts
 .playwright-mcp

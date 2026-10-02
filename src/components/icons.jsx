@@ -50,6 +50,12 @@ export const ArrowUpIcon = (props) => (
   </svg>
 );
 
+export const DownloadIcon = (props) => (
+  <svg {...base} {...props}>
+    <path d="M12 4v10m0 0 4-4m-4 4-4-4M4 18v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-1" />
+  </svg>
+);
+
 export const MenuIcon = (props) => (
   <svg {...base} {...props}>
     <path d="M4 7h16M4 12h16M4 17h16" />
