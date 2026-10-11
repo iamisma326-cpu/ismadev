@@ -82,10 +82,16 @@ export default function Projects() {
                 </ul>
 
                 <div className="project-links">
-                  <a href={project.github} target="_blank" rel="noreferrer">
-                    <GithubIcon width={16} height={16} />
-                    {t.viewCode}
-                  </a>
+                  {project.github && project.github !== "#" && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <GithubIcon width={16} height={16} />
+                      {t.viewCode}
+                    </a>
+                  )}
                   {(project.liveUrl || project.demo !== "#") && (
                     <a
                       href={project.liveUrl || project.demo}

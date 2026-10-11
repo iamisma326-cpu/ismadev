@@ -113,6 +113,17 @@ export const content = {
             "https://uniconstrucciones-web-beta.vercel.app",
           demo: "#",
         },
+        {
+          title: "Poder Jota",
+          subtitle: "Cliente · Fitness y fútbol particular",
+          description:
+            "Sitio web multi-página para Poder Jota, emprendimiento peruano de asesoramiento fitness y entrenamiento de fútbol particular con principios cristianos (Lima, Perú). Incluye planes y precios, campus de cursos digitales, área de miembros con login y registro, y pagos con Yape, sobre una base de datos y autenticación con Supabase.",
+          techIds: ["vite", "html5", "css3", "javascript", "gsap", "supabase"],
+          github: "#",
+          liveUrl:
+            "https://poder-jota.vercel.app",
+          demo: "#",
+        },
       ],
     },
     certifications: {
@@ -263,6 +274,17 @@ export const content = {
           github: "https://github.com/iamisma326-cpu/uniconstrucciones-web",
           liveUrl:
             "https://uniconstrucciones-web-beta.vercel.app",
+          demo: "#",
+        },
+        {
+          title: "Poder Jota",
+          subtitle: "Client · Fitness & personal football training",
+          description:
+            "Multi-page website for Poder Jota, a Peruvian venture offering fitness coaching and personal football training grounded in Christian principles (Lima, Peru). It includes plans and pricing, a digital courses campus, a members area with login and registration, and Yape payments, backed by Supabase database and authentication.",
+          techIds: ["vite", "html5", "css3", "javascript", "gsap", "supabase"],
+          github: "#",
+          liveUrl:
+            "https://poder-jota.vercel.app",
           demo: "#",
         },
       ],
