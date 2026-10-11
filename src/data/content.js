@@ -138,6 +138,17 @@ export const content = {
             "https://estudio-contable-web-chi.vercel.app",
           demo: "#",
         },
+        {
+          title: "LabControl",
+          subtitle: "Sistema web · Gestión de laboratorios",
+          description:
+            "Sistema de gestión para laboratorios de cómputo con dos roles: jefe de soporte técnico y practicantes. Maneja asistencia con verificación de rostro por cámara (FaceDetector API), préstamos de equipos, emergencias, gestión de laboratorios y practicantes, y reportes en PDF generados del lado del servidor con domPDF. Construido en PHP nativo con MySQL, autenticación por roles y desplegado en InfinityFree.",
+          techIds: ["php", "mysql", "html5", "css3", "javascript"],
+          github: "#",
+          liveUrl:
+            "http://labcontrol.infinityfreeapp.com",
+          demo: "#",
+        },
       ],
     },
     certifications: {
@@ -313,6 +324,17 @@ export const content = {
           github: "#",
           liveUrl:
             "https://estudio-contable-web-chi.vercel.app",
+          demo: "#",
+        },
+        {
+          title: "LabControl",
+          subtitle: "Web system · Computer lab management",
+          description:
+            "Management system for computer labs with two roles: IT support manager and trainees. Handles attendance with on-camera face verification (FaceDetector API), equipment loans, emergencies, lab and trainee management, and server-side PDF reports generated with domPDF. Built in vanilla PHP with MySQL, role-based authentication, and deployed on InfinityFree.",
+          techIds: ["php", "mysql", "html5", "css3", "javascript"],
+          github: "#",
+          liveUrl:
+            "http://labcontrol.infinityfreeapp.com",
           demo: "#",
         },
       ],
