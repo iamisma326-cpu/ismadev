@@ -100,37 +100,17 @@ export const content = {
         "Una selección de proyectos académicos y personales. Pronto los tuyos aquí.",
       viewCode: "Ver código",
       viewLive: "Ver demo",
+      techLabel: "Tecnologías utilizadas",
       items: [
         {
-          title: "Proyecto uno",
+          title: "Uniconstrucciones",
+          subtitle: "Cliente · Constructora e ingeniería civil",
           description:
-            "Descripción breve del proyecto: problema que resuelve, tecnologías usadas y tu rol en el equipo.",
-          tags: ["React", "CSS", "API REST"],
-          github: "https://github.com/",
-          demo: "#",
-        },
-        {
-          title: "Proyecto dos",
-          description:
-            "Descripción breve del proyecto: problema que resuelve, tecnologías usadas y tu rol en el equipo.",
-          tags: ["HTML", "CSS", "JavaScript"],
-          github: "https://github.com/",
-          demo: "#",
-        },
-        {
-          title: "Proyecto tres",
-          description:
-            "Descripción breve del proyecto: problema que resuelve, tecnologías usadas y tu rol en el equipo.",
-          tags: ["Node.js", "Express", "MySQL"],
-          github: "https://github.com/",
-          demo: "#",
-        },
-        {
-          title: "Proyecto cuatro",
-          description:
-            "Descripción breve del proyecto: problema que resuelve, tecnologías usadas y tu rol en el equipo.",
-          tags: ["Python", "Figma"],
-          github: "https://github.com/",
+            "Sitio web corporativo para Uniconstrucciones S.A.C. (Lima, Perú): empresa con más de 15 años de experiencia en gerencia, supervisión y ejecución de obras civiles, inspección técnica municipal y asesoría de proyectos inmobiliarios. Incluye presentacion de servicios, portafolio de obras, certificaciones PMP (PMI) e inspectores CIP Cat. 4, galerías y formulario de contacto.",
+          techIds: ["vite", "typescript", "react", "tailwind", "gsap", "nodejs", "express"],
+          github: "https://github.com/iamisma326-cpu/uniconstrucciones-web",
+          liveUrl:
+            "https://uniconstrucciones-web-beta.vercel.app",
           demo: "#",
         },
       ],
@@ -272,37 +252,17 @@ export const content = {
         "A selection of academic and personal projects. Yours could be next.",
       viewCode: "View code",
       viewLive: "Live demo",
+      techLabel: "Technologies used",
       items: [
         {
-          title: "Project one",
+          title: "Uniconstrucciones",
+          subtitle: "Client · Construction & civil engineering",
           description:
-            "Short project description: the problem it solves, technologies used and your role.",
-          tags: ["React", "CSS", "REST API"],
-          github: "https://github.com/",
-          demo: "#",
-        },
-        {
-          title: "Project two",
-          description:
-            "Short project description: the problem it solves, technologies used and your role.",
-          tags: ["HTML", "CSS", "JavaScript"],
-          github: "https://github.com/",
-          demo: "#",
-        },
-        {
-          title: "Project three",
-          description:
-            "Short project description: the problem it solves, technologies used and your role.",
-          tags: ["Node.js", "Express", "MySQL"],
-          github: "https://github.com/",
-          demo: "#",
-        },
-        {
-          title: "Project four",
-          description:
-            "Short project description: the problem it solves, technologies used and your role.",
-          tags: ["Python", "Figma"],
-          github: "https://github.com/",
+            "Corporate website for Uniconstrucciones S.A.C. (Lima, Peru): a company with over 15 years of experience in works management, supervision and execution of civil construction, municipal technical inspection and real estate project advisory. Features services presentation, works portfolio, PMP (PMI) certifications and CIP Cat. 4 inspectors, galleries and a contact form.",
+          techIds: ["vite", "typescript", "react", "tailwind", "gsap", "nodejs", "express"],
+          github: "https://github.com/iamisma326-cpu/uniconstrucciones-web",
+          liveUrl:
+            "https://uniconstrucciones-web-beta.vercel.app",
           demo: "#",
         },
       ],

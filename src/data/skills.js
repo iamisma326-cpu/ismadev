@@ -23,6 +23,10 @@ import {
   siGithub,
   siGnubash,
   siNpm,
+  siVite,
+  siTypescript,
+  siGsap,
+  siExpress,
 } from "simple-icons";
 import {
   CSharpIcon,
@@ -36,7 +40,7 @@ import {
 
 /* Si el color oficial es casi negro (GitHub, OpenJDK), en modo
    oscuro se usa un gris claro para que el icono no desaparezca. */
-const DARK_BRAND_HEXES = new Set(["#181717", "#000000"]);
+const DARK_BRAND_HEXES = new Set(["#181717", "#000000", "#0A0A0A"]);
 
 const brand = (name, icon, hexOverride) => ({
   name,
@@ -74,6 +78,10 @@ export const skillMeta = {
   github: brand("GitHub", siGithub),
   terminal: brand("Terminal", siGnubash),
   npm: brand("npm", siNpm),
+  vite: brand("Vite", siVite),
+  typescript: brand("TypeScript", siTypescript),
+  gsap: brand("GSAP", siGsap),
+  express: brand("Express", siExpress),
   csharp: custom("C#", CSharpIcon, "#68217A"),
   visualbasic: custom("Visual Basic", VisualBasicIcon, "#512BD4"),
   windowsforms: custom("Windows Forms", WindowsFormsIcon, "#512BD4"),
@@ -85,8 +93,8 @@ export const skillMeta = {
 
 /* Agrupación por tipo — nombres y descripciones de categorías en content.js */
 export const skillsByCategory = {
-  frontend: ["html5", "css3", "javascript", "react", "sass", "tailwind"],
-  backend: ["php", "nodejs", "java", "python"],
+  frontend: ["html5", "css3", "javascript", "typescript", "react", "sass", "tailwind"],
+  backend: ["php", "nodejs", "express", "java", "python"],
   desktop: ["csharp", "visualbasic", "windowsforms", "dotnet", "javaswing"],
   database: ["mysql", "sqlserver", "postgresql", "supabase"],
   tools: [

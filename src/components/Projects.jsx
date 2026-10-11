@@ -1,5 +1,7 @@
 import { useLanguage } from "../context/LanguageContext";
 import { content } from "../data/content";
+import { skillMeta } from "../data/skills";
+import SkillIcon from "./SkillIcon";
 import { useReveal } from "../hooks/useReveal";
 import { ArrowUpRightIcon, GithubIcon } from "./icons";
 import SectionWord from "./SectionWord";
@@ -32,15 +34,18 @@ export default function Projects() {
               ref={observe}
             >
               <a
-                href={project.github}
+                href={project.liveUrl || project.github}
                 target="_blank"
                 rel="noreferrer"
                 className="project-media"
-                aria-label={`${project.title} — GitHub`}
+                aria-label={`${project.title} — ${project.liveUrl ? "Live" : "GitHub"}`}
               >
                 <span className="project-index">
                   {String(i + 1).padStart(2, "0")}
                 </span>
+                {project.subtitle && (
+                  <span className="project-client">{project.subtitle}</span>
+                )}
                 <span className="project-arrow" aria-hidden="true">
                   <ArrowUpRightIcon width={22} height={22} />
                 </span>
@@ -50,8 +55,28 @@ export default function Projects() {
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
 
+                {project.techIds?.length > 0 && (
+                  <ul
+                    className="project-tech"
+                    aria-label={content[lang].projects.techLabel}
+                  >
+                    {project.techIds.map((id) => {
+                      const meta = skillMeta[id];
+                      if (!meta) return null;
+                      return (
+                        <li key={id} title={meta.name}>
+                          <span aria-hidden="true">
+                            <SkillIcon id={id} size={20} />
+                          </span>
+                          <span className="sr-only">{meta.name}</span>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                )}
+
                 <ul className="project-tags">
-                  {project.tags.map((tag) => (
+                  {project.tags?.map((tag) => (
                     <li key={tag}>{tag}</li>
                   ))}
                 </ul>
@@ -61,14 +86,16 @@ export default function Projects() {
                     <GithubIcon width={16} height={16} />
                     {t.viewCode}
                   </a>
-                  <a
-                    href={project.demo}
-                    target={project.demo !== "#" ? "_blank" : undefined}
-                    rel="noreferrer"
-                  >
-                    <ArrowUpRightIcon width={16} height={16} />
-                    {t.viewLive}
-                  </a>
+                  {(project.liveUrl || project.demo !== "#") && (
+                    <a
+                      href={project.liveUrl || project.demo}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <ArrowUpRightIcon width={16} height={16} />
+                      {t.viewLive}
+                    </a>
+                  )}
                 </div>
               </div>
             </article>
