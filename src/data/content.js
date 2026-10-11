@@ -7,8 +7,8 @@ import { skillCount } from "./skills.js";
 export const contact = {
   // ⚠️ PLACEHOLDERS — reemplazar por tus datos reales:
   email: "ismael.espinoza@gmail.com",
-  whatsappNumber: "51999888777", // formato internacional sin "+", para wa.me
-  whatsappDisplay: "+51 999 888 777",
+  whatsappNumber: "51934707514", // formato internacional sin "+", para wa.me
+  whatsappDisplay: "+51 934 707 514",
   github: "https://github.com/",
   linkedin: "https://www.linkedin.com/in/",
 };
