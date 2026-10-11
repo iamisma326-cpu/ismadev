@@ -105,7 +105,7 @@ export const content = {
         {
           title: "Uniconstrucciones",
           subtitle: "Cliente · Constructora e ingeniería civil",
-          image: "/uniconstrucciones.jpg",
+          image: "/uniconstrucciones.webp",
           description:
             "Sitio web corporativo para Uniconstrucciones S.A.C. (Lima, Perú): empresa con más de 15 años de experiencia en gerencia, supervisión y ejecución de obras civiles, inspección técnica municipal y asesoría de proyectos inmobiliarios. Incluye presentacion de servicios, portafolio de obras, certificaciones PMP (PMI) e inspectores CIP Cat. 4, galerías y formulario de contacto.",
           techIds: ["vite", "typescript", "react", "tailwind", "gsap", "nodejs", "express"],
@@ -117,7 +117,7 @@ export const content = {
         {
           title: "Poder Jota",
           subtitle: "Cliente · Fitness y fútbol particular",
-          image: "/poder-jota.jpg",
+          image: "/poder-jota.webp",
           description:
             "Sitio web multi-página para Poder Jota, emprendimiento peruano de asesoramiento fitness y entrenamiento de fútbol particular con principios cristianos (Lima, Perú). Incluye planes y precios, campus de cursos digitales, área de miembros con login y registro, y pagos con Yape, sobre una base de datos y autenticación con Supabase.",
           techIds: ["vite", "html5", "css3", "javascript", "gsap", "supabase"],
@@ -129,7 +129,7 @@ export const content = {
         {
           title: "Sánchez Delgado & Asociados",
           subtitle: "Cliente · Estudio contable y tributario",
-          image: "/sanchez-delgado.jpg",
+          image: "/sanchez-delgado.webp",
           description:
             "Sitio web para Sánchez Delgado & Asociados, estudio contable y tributario en Lima, Perú (+15 años). Incluye contabilidad, tributación SUNAT, planillas y auditorías, con herramientas interactivas: cronograma de obligaciones SUNAT parsing la página oficial en vivo, tipo de cambio y cálculo de renta anual, servidos por funciones serverless en Vercel.",
           techIds: ["vite", "typescript", "react", "gsap", "express"],
@@ -282,7 +282,7 @@ export const content = {
         {
           title: "Uniconstrucciones",
           subtitle: "Client · Construction & civil engineering",
-          image: "/uniconstrucciones.jpg",
+          image: "/uniconstrucciones.webp",
           description:
             "Corporate website for Uniconstrucciones S.A.C. (Lima, Peru): a company with over 15 years of experience in works management, supervision and execution of civil construction, municipal technical inspection and real estate project advisory. Features services presentation, works portfolio, PMP (PMI) certifications and CIP Cat. 4 inspectors, galleries and a contact form.",
           techIds: ["vite", "typescript", "react", "tailwind", "gsap", "nodejs", "express"],
@@ -294,7 +294,7 @@ export const content = {
         {
           title: "Poder Jota",
           subtitle: "Client · Fitness & personal football training",
-          image: "/poder-jota.jpg",
+          image: "/poder-jota.webp",
           description:
             "Multi-page website for Poder Jota, a Peruvian venture offering fitness coaching and personal football training grounded in Christian principles (Lima, Peru). It includes plans and pricing, a digital courses campus, a members area with login and registration, and Yape payments, backed by Supabase database and authentication.",
           techIds: ["vite", "html5", "css3", "javascript", "gsap", "supabase"],
@@ -306,7 +306,7 @@ export const content = {
         {
           title: "Sánchez Delgado & Asociados",
           subtitle: "Client · Accounting & tax firm",
-          image: "/sanchez-delgado.jpg",
+          image: "/sanchez-delgado.webp",
           description:
             "Website for Sánchez Delgado & Asociados, an accounting and tax firm in Lima, Peru (+15 years). Covers bookkeeping, SUNAT tax compliance, payroll and audits, with interactive tools: SUNAT obligations schedule parsed live from the official site, exchange rate and annual income tax calculator, served by Vercel serverless functions.",
           techIds: ["vite", "typescript", "react", "gsap", "express"],
