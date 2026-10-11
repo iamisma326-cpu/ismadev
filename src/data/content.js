@@ -105,6 +105,7 @@ export const content = {
         {
           title: "Uniconstrucciones",
           subtitle: "Cliente · Constructora e ingeniería civil",
+          image: "/uniconstrucciones.jpg",
           description:
             "Sitio web corporativo para Uniconstrucciones S.A.C. (Lima, Perú): empresa con más de 15 años de experiencia en gerencia, supervisión y ejecución de obras civiles, inspección técnica municipal y asesoría de proyectos inmobiliarios. Incluye presentacion de servicios, portafolio de obras, certificaciones PMP (PMI) e inspectores CIP Cat. 4, galerías y formulario de contacto.",
           techIds: ["vite", "typescript", "react", "tailwind", "gsap", "nodejs", "express"],
@@ -268,6 +269,7 @@ export const content = {
         {
           title: "Uniconstrucciones",
           subtitle: "Client · Construction & civil engineering",
+          image: "/uniconstrucciones.jpg",
           description:
             "Corporate website for Uniconstrucciones S.A.C. (Lima, Peru): a company with over 15 years of experience in works management, supervision and execution of civil construction, municipal technical inspection and real estate project advisory. Features services presentation, works portfolio, PMP (PMI) certifications and CIP Cat. 4 inspectors, galleries and a contact form.",
           techIds: ["vite", "typescript", "react", "tailwind", "gsap", "nodejs", "express"],

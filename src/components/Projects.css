@@ -103,6 +103,33 @@
   overflow: hidden;
 }
 
+/* Captura real del proyecto cubriendo la zona de imagen */
+.project-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  transition: transform 0.6s var(--ease);
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.04);
+}
+
+/* Texto flotado sobre la captura: blanco con sombra para legibilidad */
+.project-media:has(.project-image)::after,
+.project-media:has(.project-image) .project-index,
+.project-media:has(.project-image) .project-client {
+  color: #fff;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.55);
+}
+
+.project-media:has(.project-image)::after {
+  background-image: none;
+}
+
 /* Trama de puntos sutil sobre el degradado */
 .project-media::after {
   content: "";

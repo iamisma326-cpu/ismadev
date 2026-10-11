@@ -40,6 +40,14 @@ export default function Projects() {
                 className="project-media"
                 aria-label={`${project.title} — ${project.liveUrl ? "Live" : "GitHub"}`}
               >
+                {project.image && (
+                  <img
+                    src={project.image}
+                    alt={`Captura de ${project.title}`}
+                    loading="lazy"
+                    className="project-image"
+                  />
+                )}
                 <span className="project-index">
                   {String(i + 1).padStart(2, "0")}
                 </span>
