@@ -126,6 +126,17 @@ export const content = {
             "https://poder-jota.vercel.app",
           demo: "#",
         },
+        {
+          title: "Sánchez Delgado & Asociados",
+          subtitle: "Cliente · Estudio contable y tributario",
+          description:
+            "Sitio web para Sánchez Delgado & Asociados, estudio contable y tributario en Lima, Perú (+15 años). Incluye contabilidad, tributación SUNAT, planillas y auditorías, con herramientas interactivas: cronograma de obligaciones SUNAT parsing la página oficial en vivo, tipo de cambio y cálculo de renta anual, servidos por funciones serverless en Vercel.",
+          techIds: ["vite", "typescript", "react", "gsap", "express"],
+          github: "#",
+          liveUrl:
+            "https://estudio-contable-web-chi.vercel.app",
+          demo: "#",
+        },
       ],
     },
     certifications: {
@@ -289,6 +300,17 @@ export const content = {
           github: "#",
           liveUrl:
             "https://poder-jota.vercel.app",
+          demo: "#",
+        },
+        {
+          title: "Sánchez Delgado & Asociados",
+          subtitle: "Client · Accounting & tax firm",
+          description:
+            "Website for Sánchez Delgado & Asociados, an accounting and tax firm in Lima, Peru (+15 years). Covers bookkeeping, SUNAT tax compliance, payroll and audits, with interactive tools: SUNAT obligations schedule parsed live from the official site, exchange rate and annual income tax calculator, served by Vercel serverless functions.",
+          techIds: ["vite", "typescript", "react", "gsap", "express"],
+          github: "#",
+          liveUrl:
+            "https://estudio-contable-web-chi.vercel.app",
           demo: "#",
         },
       ],
