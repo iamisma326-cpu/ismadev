@@ -101,6 +101,10 @@ export const content = {
       viewCode: "Ver código",
       viewLive: "Ver demo",
       techLabel: "Tecnologías utilizadas",
+      paginationLabel: "Páginas de proyectos",
+      prevPage: "Página anterior",
+      nextPage: "Página siguiente",
+      gotoPage: "Ir a la página",
       items: [
         {
           title: "Uniconstrucciones",
@@ -290,6 +294,10 @@ export const content = {
       viewCode: "View code",
       viewLive: "Live demo",
       techLabel: "Technologies used",
+      paginationLabel: "Project pages",
+      prevPage: "Previous page",
+      nextPage: "Next page",
+      gotoPage: "Go to page",
       items: [
         {
           title: "Uniconstrucciones",

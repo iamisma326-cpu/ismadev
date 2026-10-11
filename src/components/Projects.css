@@ -251,3 +251,79 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* ─── Animación de entrada al cambiar de página ─── */
+/* El grid remonta con key={page}: las tarjetas entran con fade + slide.
+   El reveal base (.reveal / .is-visible de index.css) lo gestiona
+   useReveal; aquí solo redefinimos el estado oculto con desplazamiento
+   para que la entrada combine fade y deslizamiento. */
+.projects-grid .project-card.reveal {
+  opacity: 0;
+  transform: translateY(18px) translateX(14px);
+  transition: opacity 0.55s var(--ease), transform 0.55s var(--ease),
+    border-color 0.3s ease;
+}
+
+.projects-grid .project-card.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0) translateX(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-card.reveal {
+    transform: none;
+  }
+}
+
+/* ─── Paginación: ‹ 1 2 3 › debajo del grid ─── */
+.projects-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 3rem;
+}
+
+.projects-pagination button {
+  display: grid;
+  place-items: center;
+  min-width: 40px;
+  height: 40px;
+  padding: 0 0.4rem;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--bg);
+  color: var(--ink-soft);
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.25s ease, color 0.25s ease,
+    background-color 0.25s ease, transform 0.2s var(--ease);
+}
+
+.projects-pagination button:hover:not(:disabled):not(.activa) {
+  border-color: var(--ink);
+  color: var(--ink);
+  transform: translateY(-2px);
+}
+
+.projects-pagination button:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.projects-pagination .pag-num.activa {
+  background: var(--btn-bg);
+  border-color: var(--btn-bg);
+  color: var(--btn-ink);
+}
+
+.projects-pagination button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.projects-pagination .pag-arrow svg {
+  display: block;
+}
