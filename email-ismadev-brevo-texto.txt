@@ -1,0 +1,97 @@
+VERSIÓN DE TEXTO — "PRESENTACIÓN PERSONAL: DESARROLLO WEB" (v3)
+Pega este contenido en el bloque "Versión de texto" del editor de Brevo,
+sincronizada 1:1 con email-ismadev-brevo.html.
+Asunto (fórmula "beneficio + marca", sin gratis/urgente/descuento —
+móvil trunca a ~35 caracteres):
+  Tu próxima web empieza aquí — Ismael   (favorito, 36 car.)
+Alternates para probar:
+  Da el salto digital con un sitio a tu medida
+  ¿Qué le falta a tu sitio web?
+  Te muestro tu próximo sitio web
+  ¿Cómo se ve tu negocio en internet?
+Remitente "De": Ismael Espinoza
+Preheader:
+  Diseño y código web más resultados: sitios rápidos y responsivos que
+  venden. Te muestro mi portafolio y la forma rápida de escribirme.
+
+----------------------------------------------------------------
+
+Desarrollador Web · Lima, Perú
+Ismael Espinoza
+
+Diseño con criterio · Programo con rigor · Entrego a tiempo
+
+Hola,
+
+Registro mi trabajo en esta nota: soy Ismael Espinoza, programador y
+diseñador web en Lima. Construyo sitios modernos, rapidísimos y
+responsivos para negocios que ya se merecen verse serios en internet —
+constructoras, estudios contables y emprendimientos de la misma talla.
+
+¡Tu próxima web empieza aquí!
+
+Cada proyecto incluye lo esencial para que tu negocio se vea
+profesional desde el primer día:
+* Diseño 100% responsivo
+* Carga rápida (menos de 2 segundos)
+* Secciones a tu medida
+* Soporte post-lanzamiento
+
+Ver mi portafolio:
+https://ismadev-six.vercel.app
+
+6+ Proyectos entregados · 20+ Tecnologías dominadas · 3 Años de experiencia
+
+01 · LO QUE OFREZCO
+
+* Diseño web — Sitios, landings y portafolios limpios, con animaciones
+  sutiles y 100% responsivos.
+* Programación — Backend, APIs, bases de datos, paneles de
+  administración y todo a medida.
+* Apps de escritorio — Software para Windows con interfaz cuidada,
+  cuando la operación lo amerita.
+* Modernización — ¿Sitio viejo o lento? Lo rediseño para que cargue
+  rápido y capture clientes.
+
+02 · TRABAJO REAL
+
+* Uniconstrucciones S.A.C. — Sitio corporativo para constructora:
+  servicios, portafolio de obras y certificaciones PMP.
+  https://uniconstrucciones-web-beta.vercel.app
+* Poder Jota — Campus de cursos, área de miembros con login y pagos
+  integrados (Yape).
+  https://poder-jota.vercel.app
+* Sánchez Delgado & Asociados — Cronograma SUNAT en vivo, tipo de
+  cambio y calculadora de renta anual.
+  https://estudio-contable-web-chi.vercel.app
+
+03 · MI CAJA DE HERRAMIENTAS
+
+Frontend: HTML5, CSS3, JavaScript, React, TypeScript, Tailwind, GSAP
+Backend: PHP, Node.js, Express, Python, Java
+Escritorio: C#/.NET, Visual Basic, Windows Forms, Java Swing
+Datos: MySQL, SQL Server, PostgreSQL, Supabase
+Herramientas: Git, GitHub, VS Code, npm
+
+¿CONVERSAMOS?
+
+Cuéntame tu proyecto y te muestro cómo lo resolvería.
+
+WhatsApp: https://wa.me/51934707514
+Correo: mailto:ismael.espinoza@gmail.com
++51 934 707 514 · ismael.espinoza@gmail.com
+
+Saludos,
+Ismael Espinoza — Desarrollador web
+https://ismadev-six.vercel.app
+
+----------------------------------------------------------------
+
+Ismael Espinoza · Desarrollo Web Independiente
+Lima, Perú
+
+Recibes este email porque exploramos una oportunidad de trabajar
+juntos. Si prefieres no recibir más, te entiendo.
+
+Darse de baja:
+{{ unsubscribe }}

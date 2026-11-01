@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  EMAIL — "PRESENTACIÓN PERSONAL: DESARROLLO WEB" (v3 · diseño premium breve)
+  Ismael Espinoza · ismadev-six.vercel.app
+  ============================================================================
+  CÓMO USAR EN BREVO:
+  1. Campañas > Crear campaña > plantilla en blanco > pega este HTML completo
+     en el editor de código.
+  2. Personalización opcional: sustituye "Hola," por
+     "Hola {{ contact.FIRSTNAME }}," (merge tag de Brevo).
+  3. El enlace "Darse de baja" usa {{ unsubscribe }} (merge tag oficial de
+     Brevo). Si el editor no lo reconoce al pegar, inserta el bloque de baja
+     desde el propio editor.
+  4. Sincroniza la versión de texto con email-ismadev-brevo-texto.txt.
+  5. ASUNTO (fórmula "beneficio + marca", sin gratis/urgente/descuento,
+     sin mayúsculas sostenidas, sin signos dobles, sin emojis; móvil trunca
+     a ~35 caracteres, el gancho va primero):
+      * Tu próxima web empieza aquí — Ismael          (36 car. — favorito)
+      * Da el salto digital con un sitio a tu medida  (43 car. — secundario)
+      * ¿Qué le falta a tu sitio web?                 (29 car. — curiosidad)
+     Slogan para acompañar al logo (ya en el hero):
+      "Diseño con criterio · Programo con rigor · Entrego a tiempo"
+     Remitente "De": Ismael Espinoza.
+
+  IMAGEN DE PERFIL:
+  - https://ismadev-six.vercel.app/avatar-email.png (desplegada, HTTP 200).
+  - Ideal: subirla a la biblioteca de imágenes de Brevo y reemplazar la URL.
+
+  NOTAS TÉCNICAS:
+  - Tablas + CSS inline: Gmail, Outlook, Apple Mail, Yahoo ok.
+  - Hero oscuro, grid 2x2 y estadísticas colapsan a 1 columna en móvil
+
+    (clases .stack + media query).
+  - Paleta: navy #0f172a, azul #2563eb, ámbar #d97706 (solo 2 acentos).
+-->
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Ismael Espinoza — Desarrollo y Diseño Web</title>
+<style>
+  @media only screen and (max-width: 620px) {
+    .wrapper  { width: 100% !important; }
+    .px-pad   { padding-left: 24px !important; padding-right: 24px !important; }
+    .stack    { display: block !important; width: 100% !important; }
+    .stack-sm { display: block !important; width: 100% !important; margin-bottom: 10px; }
+    .h1       { font-size: 27px !important; line-height: 34px !important; }
+  }
+</style>
+</head>
+
+<body style="margin:0; padding:0; background-color:#e9edf4; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;">
+
+  <!-- Preheader visible junto al asunto -->
+  <div style="display:none; max-height:0; overflow:hidden; mso-hide:all;">
+    Diseño y código web más resultados: sitios rápidos y responsivos que venden. Te muestro mi portafolio y la forma rápida de escribirme.
+  </div>
+
+  <!-- ============ CONTENEDOR ============ -->
+  <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color:#e9edf4;">
+    <tr>
+      <td align="center" style="padding:30px 12px;">
+
+        <!-- ==================== TARJETA PRINCIPAL ==================== -->
+        <table role="presentation" class="wrapper" border="0" cellpadding="0" cellspacing="0" width="580" style="width:580px; max-width:580px; background-color:#ffffff; border-radius:16px; overflow:hidden;">
+
+          <!-- ===== HERO OSCURO ===== -->
+          <tr>
+            <td bgcolor="#0f172a" class="px-pad" align="center" style="padding:40px 44px 34px 44px;">
+              <!-- logo (letterhead) → sube public/email-logo.png al desplegar el portafolio,
+                   o súbelo directamente a la biblioteca de imágenes de Brevo -->
+              <table role="presentation" border="0" cellpadding="0" cellspacing="0" align="left" style="margin:0 0 4px 0;">
+                <tr>
+                  <td style="font-size:0; line-height:0;">
+                    <img src="https://ismadev-six.vercel.app/email-logo.png" width="46" height="46" alt="Ismael Espinoza" style="display:block; width:46px; height:46px; border-radius:10px; -ms-interpolation-mode:bicubic;" />
+                  </td>
+                </tr>
+              </table>
+              <div style="clear:both;"></div>
+
+              <img src="https://ismadev-six.vercel.app/avatar-email.png" width="84" height="84" alt="Ismael Espinoza" style="display:block; margin:0 auto; width:84px; height:84px; border-radius:50%; border:3px solid #2563eb; outline:0; -ms-interpolation-mode:bicubic;" />
+
+              <div style="font-size:11px; letter-spacing:3px; text-transform:uppercase; color:#93c5fd; font-weight:bold; padding-top:16px;">Desarrollador Web · Lima, Perú</div>
+              <h1 class="h1" style="margin:6px 0 0 0; font-family:Georgia, 'Times New Roman', serif; font-size:30px; line-height:38px; font-weight:bold; color:#ffffff;">
+                Ismael Espinoza
+              </h1>
+              <p style="margin:10px 0 0 0; font-size:14px; line-height:22px; color:#94a3b8; max-width:420px;">
+                Diseño con criterio &nbsp;&middot;&nbsp; Programo con rigor &nbsp;&middot;&nbsp; Entrego a tiempo
+              </p>
+            </td>
+          </tr>
+
+          <!-- ===== INTRO ===== -->
+          <tr>
+            <td class="px-pad" style="padding:32px 46px 0 46px;">
+              <p style="margin:0; font-size:15px; line-height:25px; color:#3d3d3d;">
+                Hola,
+              </p>
+              <p style="margin:10px 0 0 0; font-size:15px; line-height:25px; color:#3d3d3d;">
+                Registro mi trabajo en esta nota: <strong style="color:#0d0d0d;">soy Ismael Espinoza</strong>, programador y diseñador web en Lima. Construyo sitios <strong style="color:#0d0d0d;">modernos, rapidísimos y responsivos</strong> para negocios que ya se merecen verse serios en internet — constructoras, estudios contables y emprendimientos de la misma talla.
+              </p>
+            </td>
+          </tr>
+
+  <!-- ===== ENCABEZADO DE OFERTA (fórmula: encabezado → destacados → CTA) ===== -->
+  <tr>
+    <td class="px-pad" style="padding:26px 46px 0 46px; text-align:center;">
+      <div style="font-family:Georgia, 'Times New Roman', serif; font-size:20px; line-height:26px; font-weight:bold; color:#0d0d0d;">&#161;Tu pr&oacute;xima web empieza aqu&#237;!</div>
+      <p style="margin:8px 0 0 0; font-size:13px; line-height:20px; color:#6b6b6b;">
+        Cada proyecto incluye lo esencial para que tu negocio se vea profesional desde el primer d&iacute;a:
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td class="px-pad" style="padding:14px 46px 0 46px;">
+      <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+          <td class="stack-sm" width="49%" valign="top" style="font-size:13px; line-height:20px; color:#3d3d3d; padding:6px 0;">
+            <span style="color:#2563eb; font-weight:bold;">&#10004;</span>&nbsp; Dise&ntilde;o 100% responsivo
+          </td>
+          <td width="2%">&nbsp;</td>
+          <td class="stack-sm" width="49%" valign="top" style="font-size:13px; line-height:20px; color:#3d3d3d; padding:6px 0;">
+            <span style="color:#2563eb; font-weight:bold;">&#10004;</span>&nbsp; Carga r&aacute;pida (&lt; 2 segundos)
+          </td>
+        </tr>
+        <tr>
+          <td class="stack-sm" width="49%" valign="top" style="font-size:13px; line-height:20px; color:#3d3d3d; padding:6px 0;">
+            <span style="color:#2563eb; font-weight:bold;">&#10004;</span>&nbsp; Secciones a tu medida
+          </td>
+          <td width="2%">&nbsp;</td>
+          <td class="stack-sm" width="49%" valign="top" style="font-size:13px; line-height:20px; color:#3d3d3d; padding:6px 0;">
+            <span style="color:#2563eb; font-weight:bold;">&#10004;</span>&nbsp; Soporte post-lanzamiento
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- ===== CTA PRINCIPAL (primer clic: portafolio) ===== -->
+  <tr>
+    <td class="px-pad" style="padding:22px 46px 0 46px;">
+      <table role="presentation" border="0" cellpadding="0" cellspacing="0" style="margin:0 auto;">
+        <tr>
+          <td align="center" bgcolor="#2563eb" style="border-radius:40px;">
+            <a href="https://ismadev-six.vercel.app" target="_blank" style="display:inline-block; padding:15px 38px; font-size:15px; font-weight:bold; color:#ffffff; text-decoration:none; border-radius:40px;">
+              Ver mi portafolio &rarr;
+            </a>
+          </td>
+        </tr>
+      </table>
+      <p style="margin:10px 0 0 0; text-align:center; font-size:12px; color:#9c9c9c;">
+        <a href="https://ismadev-six.vercel.app" target="_blank" style="color:#2563eb; font-weight:bold; text-decoration:none;">ismadev-six.vercel.app</a>
+      </p>
+    </td>
+  </tr>
+
+  <!-- ===== ESTADÍSTICAS ===== -->
+          <tr>
+            <td class="px-pad" style="padding:22px 46px 0 46px;">
+              <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td class="stack" width="33%" valign="top" style="background-color:#eff6ff; border-radius:12px; padding:16px 12px; text-align:center;">
+                    <div style="font-family:Georgia, serif; font-size:24px; font-weight:bold; color:#1d4ed8;">6+</div>
+                    <div style="font-size:11px; color:#556677; padding-top:2px;">Proyectos entregados</div>
+                  </td>
+                  <td width="2%">&nbsp;</td>
+                  <td class="stack" width="33%" valign="top" style="background-color:#fffbeb; border-radius:12px; padding:16px 12px; text-align:center;">
+                    <div style="font-family:Georgia, serif; font-size:24px; font-weight:bold; color:#b45309;">20+</div>
+                    <div style="font-size:11px; color:#556677; padding-top:2px;">Tecnologías dominadas</div>
+                  </td>
+                  <td width="2%">&nbsp;</td>
+                  <td class="stack" width="30%" valign="top" style="background-color:#f1f4fa; border-radius:12px; padding:16px 12px; text-align:center;">
+                    <div style="font-family:Georgia, serif; font-size:24px; font-weight:bold; color:#0d0d0d;">3</div>
+                    <div style="font-size:11px; color:#556677; padding-top:2px;">Años de experiencia</div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- ===== SERVICIOS ===== -->
+          <tr>
+            <td class="px-pad" style="padding:36px 46px 0 46px;">
+              <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-top:1px solid #e5e7eb;">
+                <tr><td style="padding:22px 0 0 0;">
+                  <div style="font-size:11px; letter-spacing:2.5px; text-transform:uppercase; color:#1d4ed8; font-weight:bold; padding-bottom:4px;">
+                    <span style="color:#d97706;">01</span>&nbsp; · &nbsp;Lo que ofrezco
+                  </div>
+                </td></tr>
+              </table>
+
+              <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-top:15px;">
+                <tr>
+                  <td class="stack-sm" width="49%" valign="top" style="background-color:#f7f9fd; border-left:3px solid #2563eb; border-radius:8px; padding:15px 16px;">
+                    <div style="font-size:14px; font-weight:bold; color:#0d0d0d;">Diseño web</div>
+                    <div style="font-size:12px; line-height:19px; color:#6b6b6b; padding-top:5px;">Sitios, landings y portafolios limpios, con animaciones sutiles y 100% responsivos.</div>
+                  </td>
+                  <td width="2%">&nbsp;</td>
+                  <td class="stack-sm" width="49%" valign="top" style="background-color:#f7f9fd; border-left:3px solid #d97706; border-radius:8px; padding:15px 16px;">
+                    <div style="font-size:14px; font-weight:bold; color:#0d0d0d;">Programación</div>
+                    <div style="font-size:12px; line-height:19px; color:#6b6b6b; padding-top:5px;">Backend, APIs, bases de datos, paneles de administración y todo a medida.</div>
+                  </td>
+                </tr>
+                <tr><td colspan="3" height="10" style="line-height:10px; font-size:0;">&nbsp;</td></tr>
+                <tr>
+                  <td class="stack-sm" width="49%" valign="top" style="background-color:#f7f9fd; border-left:3px solid #d97706; border-radius:8px; padding:15px 16px;">
+                    <div style="font-size:14px; font-weight:bold; color:#0d0d0d;">Apps de escritorio</div>
+                    <div style="font-size:12px; line-height:19px; color:#6b6b6b; padding-top:5px;">Software para Windows con interfaz cuidada, cuando la operación lo amerita.</div>
+                  </td>
+                  <td width="2%">&nbsp;</td>
+                  <td class="stack-sm" width="49%" valign="top" style="background-color:#f7f9fd; border-left:3px solid #2563eb; border-radius:8px; padding:15px 16px;">
+                    <div style="font-size:14px; font-weight:bold; color:#0d0d0d;">Modernización</div>
+                    <div style="font-size:12px; line-height:19px; color:#6b6b6b; padding-top:5px;">¿Sitio viejo o lento? Lo rediseño para que cargue rápido y capture clientes.</div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- ===== PROYECTOS ===== -->
+          <tr>
+            <td class="px-pad" style="padding:34px 46px 0 46px;">
+              <div style="border-top:1px solid #e5e7eb; padding-top:22px;">
+                <div style="font-size:11px; letter-spacing:2.5px; text-transform:uppercase; color:#1d4ed8; font-weight:bold; padding-bottom:4px;">
+                  <span style="color:#d97706;">02</span>&nbsp; · &nbsp;Trabajo real
+                </div>
+              </div>
+
+              <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-top:6px;">
+                <tr>
+                  <td style="padding:13px 0; border-bottom:1px solid #eceef2;">
+                    <div style="font-size:14px; font-weight:bold; color:#0d0d0d;">Uniconstrucciones S.A.C.</div>
+                    <div style="font-size:12px; color:#8b8b8b; padding-top:2px;">Sitio corporativo para constructora: servicios, portafolio de obras y certificaciones PMP.</div>
+                    <a href="https://uniconstrucciones-web-beta.vercel.app" target="_blank" style="color:#2563eb; font-weight:bold; text-decoration:none; font-size:12px; padding-top:4px;">Ver sitio &nbsp;&gt;</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding:13px 0; border-bottom:1px solid #eceef2;">
+                    <div style="font-size:14px; font-weight:bold; color:#0d0d0d;">Poder Jota</div>
+                    <div style="font-size:12px; color:#8b8b8b; padding-top:2px;">Campus de cursos, área de miembros con login y pagos integrados (Yape).</div>
+                    <a href="https://poder-jota.vercel.app" target="_blank" style="color:#2563eb; font-weight:bold; text-decoration:none; font-size:12px; padding-top:4px;">Ver sitio &nbsp;&gt;</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding:13px 0;">
+                    <div style="font-size:14px; font-weight:bold; color:#0d0d0d;">Sánchez Delgado &amp; Asociados</div>
+                    <div style="font-size:12px; color:#8b8b8b; padding-top:2px;">Cronograma SUNAT en vivo, tipo de cambio y calculadora de renta anual.</div>
+                    <a href="https://estudio-contable-web-chi.vercel.app" target="_blank" style="color:#2563eb; font-weight:bold; text-decoration:none; font-size:12px; padding-top:4px;">Ver sitio &nbsp;&gt;</a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- ===== TECNOLOGÍAS (compactas) ===== -->
+          <tr>
+            <td class="px-pad" style="padding:28px 46px 0 46px;">
+              <div style="font-size:11px; letter-spacing:2.5px; text-transform:uppercase; color:#1d4ed8; font-weight:bold; padding-bottom:2px;">
+                <span style="color:#d97706;">03</span>&nbsp; · &nbsp;Mi caja de herramientas
+              </div>
+              <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-top:10px;">
+                <tr>
+                  <td colspan="2" style="font-size:13px; line-height:21px; color:#4b5563; padding:2px 0;">
+                    <strong style="color:#0f172a;">Frontend:</strong> HTML5, CSS3, JavaScript, React, TypeScript, Tailwind, GSAP
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2" style="font-size:13px; line-height:21px; color:#4b5563; padding:2px 0;">
+                    <strong style="color:#0f172a;">Backend:</strong> PHP, Node.js, Express, Python, Java
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2" style="font-size:13px; line-height:21px; color:#4b5563; padding:2px 0;">
+                    <strong style="color:#0f172a;">Escritorio:</strong> C#/.NET, Visual Basic, Windows Forms, Java Swing
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2" style="font-size:13px; line-height:21px; color:#4b5563; padding:2px 0; border-top:1px dashed #e5e7eb;">
+                    <strong style="color:#0f172a;">Datos:</strong> MySQL, SQL Server, PostgreSQL, Supabase &nbsp;&nbsp; <strong style="color:#0f172a;">Herramientas:</strong> Git, GitHub, VS Code, npm
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- ===== CTA FINAL ===== -->
+          <tr>
+            <td class="px-pad" style="padding:34px 46px 8px 46px;">
+              <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color:#0f172a; border-radius:14px; border-top:4px solid #2563eb;">
+                <tr>
+                  <td align="center" style="padding:28px 24px;">
+                    <div style="font-family:Georgia, 'Times New Roman', serif; font-size:21px; color:#ffffff; font-weight:bold;">¿Conversamos?</div>
+                    <p style="margin:8px 0 0 0; font-size:13px; line-height:20px; color:#94a3b8;">
+                      Cuéntame tu proyecto y te muestro cómo lo resolvería.
+                    </p>
+                    <table role="presentation" border="0" cellpadding="0" cellspacing="0" align="center" style="margin:18px auto 0 auto;">
+                      <tr>
+                        <td bgcolor="#2563eb" style="border-radius:40px;">
+                          <a href="https://wa.me/51934707514" target="_blank" style="display:inline-block; padding:13px 26px; font-size:13px; font-weight:bold; color:#ffffff; text-decoration:none; border-radius:40px;">Escr&iacute;beme por WhatsApp &rarr;</a>
+                        </td>
+                        <td width="10">&nbsp;</td>
+                        <td bgcolor="#1e293b" style="border-radius:40px; border:1px solid #334155;">
+                          <a href="mailto:ismael.espinoza@gmail.com" style="display:inline-block; padding:12px 24px; font-size:13px; font-weight:bold; color:#ffffff; text-decoration:none; border-radius:40px;">Correo &rarr;</a>
+                        </td>
+                      </tr>
+                    </table>
+                    <p style="margin:14px 0 0 0; font-size:12px; color:#64748b;">
+                      +51 934 707 514 · ismael.espinoza@gmail.com
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- ===== FIRMADO ===== -->
+          <tr>
+            <td class="px-pad" style="padding:24px 46px 30px 46px;">
+              <p style="margin:0; font-size:14px; line-height:23px; color:#3d3d3d;">
+                Saludos,<br />
+                <strong style="color:#0d0d0d;">Ismael Espinoza</strong> — <span style="font-size:12px; color:#9c9c9c;">Desarrollador web · <a href="https://ismadev-six.vercel.app" target="_blank" style="color:#2563eb; font-weight:bold; text-decoration:none;">ismadev-six.vercel.app</a></span>
+              </p>
+            </td>
+          </tr>
+        </table>
+        <!-- ==================== FIN TARJETA ==================== -->
+
+        <!-- ===== FOOTER ===== -->
+        <!-- Requisito CAN-SPAM / GDPR: nombre del remitente + dirección física + baja. -->
+        <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="580" align="center" class="wrapper" style="width:580px; max-width:580px;">
+          <tr>
+            <td align="center" style="padding:16px 24px 6px 24px;">
+              <div style="font-size:12px; font-weight:bold; color:#6b6b6b;">Ismael Espinoza · Desarrollo Web Independiente</div>
+              <div style="font-size:11px; color:#9c9c9c; padding-top:2px;">Lima, Perú</div>
+            </td>
+          </tr>
+          <tr>
+            <td align="center" style="padding:4px 24px 28px 24px; font-size:11px; line-height:17px; color:#9c9c9c;">
+              <div>Recibes este email porque exploramos una oportunidad de trabajar juntos. Si prefieres no recibir más, te entiendo.</div>
+              <div style="padding-top:6px;">
+                <a href="{{ unsubscribe }}" style="color:#9c9c9c; text-decoration:underline;">Darse de baja</a>
+              </div>
+            </td>
+          </tr>
+        </table>
+
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>
