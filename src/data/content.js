@@ -135,23 +135,23 @@ export const content = {
           subtitle: "Cliente · Estudio contable y tributario",
           image: "/sanchez-delgado.webp",
           description:
-            "Sitio web para Sánchez Delgado & Asociados, estudio contable y tributario en Lima, Perú (+15 años). Incluye contabilidad, tributación SUNAT, planillas y auditorías, con herramientas interactivas: cronograma de obligaciones SUNAT parsing la página oficial en vivo, tipo de cambio y cálculo de renta anual, servidos por funciones serverless en Vercel.",
-          techIds: ["vite", "typescript", "react", "gsap", "express"],
+            "Sitio web y plataforma para Sánchez Delgado & Asociados, estudio contable y tributario en Lima, Perú (+15 años). Cubre contabilidad, tributación SUNAT, planillas y auditorías, con herramientas en vivo (cronograma SUNAT, tipo de cambio, renta anual), área de clientes con notificaciones de noticias SUNAT por email y WhatsApp, y panel interno para comprobantes, PLE y liquidaciones.",
+          techIds: ["vite", "typescript", "react", "gsap", "nodejs", "postgresql"],
           github: "#",
           liveUrl:
             "https://estudio-contable-web-chi.vercel.app",
           demo: "#",
         },
         {
-          title: "LabControl",
-          subtitle: "Sistema web · Gestión de laboratorios",
-          image: "/labcontrol.webp",
+          title: "DIEZ CANSECO",
+          subtitle: "Cliente · Barbería familiar",
+          image: "/diez-canseco.webp",
           description:
-            "Sistema de gestión para laboratorios de cómputo con dos roles: jefe de soporte técnico y practicantes. Maneja asistencia con verificación de rostro por cámara (FaceDetector API), préstamos de equipos, emergencias, gestión de laboratorios y practicantes, y reportes en PDF generados del lado del servidor con domPDF. Construido en PHP nativo con MySQL, autenticación por roles y desplegado en InfinityFree.",
-          techIds: ["php", "mysql", "html5", "css3", "javascript"],
+            "Landing page para DIEZ CANSECO · Le Petit Barbier, barbería familiar en Lima, Perú. Incluye presentación de servicios, galería de trabajos, reservas guiadas que se confirman por WhatsApp, secuencia de intro y animaciones al hacer scroll, con diseño responsive.",
+          techIds: ["nextjs", "typescript", "react", "tailwind", "gsap"],
           github: "#",
           liveUrl:
-            "http://labcontrol.infinityfreeapp.com",
+            "https://landing-page-diez-canseco.vercel.app",
           demo: "#",
         },
       ],
@@ -328,23 +328,23 @@ export const content = {
           subtitle: "Client · Accounting & tax firm",
           image: "/sanchez-delgado.webp",
           description:
-            "Website for Sánchez Delgado & Asociados, an accounting and tax firm in Lima, Peru (+15 years). Covers bookkeeping, SUNAT tax compliance, payroll and audits, with interactive tools: SUNAT obligations schedule parsed live from the official site, exchange rate and annual income tax calculator, served by Vercel serverless functions.",
-          techIds: ["vite", "typescript", "react", "gsap", "express"],
+            "Website and platform for Sánchez Delgado & Asociados, an accounting and tax firm in Lima, Peru (+15 years). Covers bookkeeping, SUNAT tax compliance, payroll and audits, with live tools (SUNAT schedule, exchange rate, annual income tax), a client area with SUNAT news alerts by email and WhatsApp, and an internal panel for invoices, PLE and settlements.",
+          techIds: ["vite", "typescript", "react", "gsap", "nodejs", "postgresql"],
           github: "#",
           liveUrl:
             "https://estudio-contable-web-chi.vercel.app",
           demo: "#",
         },
         {
-          title: "LabControl",
-          subtitle: "Web system · Computer lab management",
-          image: "/labcontrol.webp",
+          title: "DIEZ CANSECO",
+          subtitle: "Client · Family barbershop",
+          image: "/diez-canseco.webp",
           description:
-            "Management system for computer labs with two roles: IT support manager and trainees. Handles attendance with on-camera face verification (FaceDetector API), equipment loans, emergencies, lab and trainee management, and server-side PDF reports generated with domPDF. Built in vanilla PHP with MySQL, role-based authentication, and deployed on InfinityFree.",
-          techIds: ["php", "mysql", "html5", "css3", "javascript"],
+            "Landing page for DIEZ CANSECO · Le Petit Barbier, a family barbershop in Lima, Peru. Includes a services showcase, a work gallery, guided bookings confirmed over WhatsApp, an intro sequence and scroll animations, all fully responsive.",
+          techIds: ["nextjs", "typescript", "react", "tailwind", "gsap"],
           github: "#",
           liveUrl:
-            "http://labcontrol.infinityfreeapp.com",
+            "https://landing-page-diez-canseco.vercel.app",
           demo: "#",
         },
       ],

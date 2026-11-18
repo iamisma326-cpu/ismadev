@@ -27,6 +27,7 @@ import {
   siTypescript,
   siGsap,
   siExpress,
+  siNextdotjs,
 } from "simple-icons";
 import {
   CSharpIcon,
@@ -82,6 +83,7 @@ export const skillMeta = {
   typescript: brand("TypeScript", siTypescript),
   gsap: brand("GSAP", siGsap),
   express: brand("Express", siExpress),
+  nextjs: brand("Next.js", siNextdotjs),
   csharp: custom("C#", CSharpIcon, "#68217A"),
   visualbasic: custom("Visual Basic", VisualBasicIcon, "#512BD4"),
   windowsforms: custom("Windows Forms", WindowsFormsIcon, "#512BD4"),
