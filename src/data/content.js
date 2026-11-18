@@ -9,7 +9,7 @@ export const contact = {
   email: "ismael.espinoza@gmail.com",
   whatsappNumber: "51934707514", // formato internacional sin "+", para wa.me
   whatsappDisplay: "+51 934 707 514",
-  github: "https://github.com/",
+  github: "https://github.com/iamisma326-cpu",
   linkedin: "https://www.linkedin.com/in/",
 };
 
@@ -34,6 +34,7 @@ export const content = {
         "Construyo experiencias web limpias y funcionales. Me enfoco en el detalle, la simplicidad y el código que se lee tan bien como se ve.",
       ctaPrimary: "Ver proyectos",
       ctaSecondary: "Escríbeme por WhatsApp",
+      ctaGithub: "GitHub",
       stats: [
         { value: "6+", label: "Proyectos construidos" },
         { value: String(skillCount), label: "Tecnologías dominadas" },
@@ -229,6 +230,7 @@ export const content = {
         "I build clean, functional web experiences. I care about detail, simplicity, and code that reads as good as it looks.",
       ctaPrimary: "View projects",
       ctaSecondary: "Message me on WhatsApp",
+      ctaGithub: "GitHub",
       stats: [
         { value: "6+", label: "Projects built" },
         { value: String(skillCount), label: "Technologies mastered" },

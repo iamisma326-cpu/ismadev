@@ -1,6 +1,6 @@
 import { useLanguage } from "../context/LanguageContext";
 import { content, contact } from "../data/content";
-import { ArrowDownIcon, WhatsAppIcon, PinIcon } from "./icons";
+import { ArrowDownIcon, WhatsAppIcon, GithubIcon, PinIcon } from "./icons";
 import { Star } from "./SectionDecor";
 import ismaPhoto from "../assets/isma.png";
 import "./Hero.css";
@@ -60,6 +60,15 @@ export default function Hero() {
             >
               <WhatsAppIcon width={18} height={18} />
               {t.ctaSecondary}
+            </a>
+            <a
+              href={contact.github}
+              target="_blank"
+              rel="noreferrer"
+              className="btn btn-ghost"
+            >
+              <GithubIcon width={18} height={18} />
+              {t.ctaGithub}
             </a>
           </div>
 

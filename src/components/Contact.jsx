@@ -1,7 +1,7 @@
 import { useLanguage } from "../context/LanguageContext";
 import { content, contact } from "../data/content";
 import { useReveal } from "../hooks/useReveal";
-import { WhatsAppIcon, MailIcon, ArrowUpRightIcon } from "./icons";
+import { WhatsAppIcon, MailIcon, GithubIcon, ArrowUpRightIcon } from "./icons";
 import SectionWord from "./SectionWord";
 import SectionDecor from "./SectionDecor";
 import "./Contact.css";
@@ -49,6 +49,15 @@ export default function Contact() {
             >
               <MailIcon width={18} height={18} />
               {t.gmail}
+            </a>
+            <a
+              href={contact.github}
+              target="_blank"
+              rel="noreferrer"
+              className="btn btn-ghost"
+            >
+              <GithubIcon width={18} height={18} />
+              GitHub
             </a>
           </div>
 
