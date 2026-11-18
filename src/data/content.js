@@ -6,7 +6,7 @@ import { skillCount } from "./skills.js";
 
 export const contact = {
   // ⚠️ PLACEHOLDERS — reemplazar por tus datos reales:
-  email: "ismael.espinoza@gmail.com",
+  email: "iamisma326@gmail.com",
   whatsappNumber: "51934707514", // formato internacional sin "+", para wa.me
   whatsappDisplay: "+51 934 707 514",
   github: "https://github.com/iamisma326-cpu",
