@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLanguage } from "../context/LanguageContext";
-import { content, contact } from "../data/content";
+import { content, whatsappUrl } from "../data/content";
 import { useLogoTypewriter, LogoTyped } from "../hooks/useLogoTypewriter.jsx";
 import {
   SunIcon,
@@ -102,7 +102,7 @@ export default function Navbar({ theme, toggleTheme }) {
           </button>
 
           <a
-            href={`https://wa.me/${contact.whatsappNumber}`}
+            href={whatsappUrl(content[lang].whatsappMessage)}
             target="_blank"
             rel="noreferrer"
             className="btn btn-solid navbar-cta"

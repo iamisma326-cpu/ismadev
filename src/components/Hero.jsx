@@ -1,5 +1,5 @@
 import { useLanguage } from "../context/LanguageContext";
-import { content, contact } from "../data/content";
+import { content, contact, whatsappUrl } from "../data/content";
 import { ArrowDownIcon, WhatsAppIcon, GithubIcon, PinIcon } from "./icons";
 import { Star } from "./SectionDecor";
 import ismaPhoto from "../assets/isma.png";
@@ -53,7 +53,7 @@ export default function Hero() {
               {t.ctaPrimary}
             </a>
             <a
-              href={`https://wa.me/${contact.whatsappNumber}`}
+              href={whatsappUrl(content[lang].whatsappMessage)}
               target="_blank"
               rel="noreferrer"
               className="btn btn-ghost"

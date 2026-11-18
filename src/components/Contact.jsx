@@ -1,5 +1,5 @@
 import { useLanguage } from "../context/LanguageContext";
-import { content, contact } from "../data/content";
+import { content, contact, whatsappUrl } from "../data/content";
 import { useReveal } from "../hooks/useReveal";
 import { WhatsAppIcon, MailIcon, GithubIcon, ArrowUpRightIcon } from "./icons";
 import SectionWord from "./SectionWord";
@@ -35,7 +35,7 @@ export default function Contact() {
 
           <div className="contact-actions">
             <a
-              href={`https://wa.me/${contact.whatsappNumber}`}
+              href={whatsappUrl(content[lang].whatsappMessage)}
               target="_blank"
               rel="noreferrer"
               className="btn btn-solid"

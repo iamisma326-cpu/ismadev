@@ -13,8 +13,14 @@ export const contact = {
   linkedin: "https://www.linkedin.com/in/",
 };
 
+/* Enlace de WhatsApp con mensaje precargado (por idioma) */
+export const whatsappUrl = (message) =>
+  `https://wa.me/${contact.whatsappNumber}?text=${encodeURIComponent(message)}`;
+
 export const content = {
   es: {
+    whatsappMessage:
+      "Hola Ismael, vi tu portafolio y me gustaría ponerme en contacto contigo.",
     nav: {
       skip: "Saltar al contenido",
       links: [
@@ -211,6 +217,8 @@ export const content = {
   },
 
   en: {
+    whatsappMessage:
+      "Hi Ismael, I saw your portfolio and I'd like to get in touch with you.",
     nav: {
       skip: "Skip to content",
       links: [
