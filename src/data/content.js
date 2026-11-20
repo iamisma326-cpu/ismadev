@@ -170,7 +170,6 @@ export const content = {
       subtitle:
         "Credenciales verificables que respaldan mis habilidades técnicas.",
       syllabusLabel: "Temario cubierto",
-      verifyCredential: "Ver credencial verificada",
       downloadCredential: "Descargar PDF",
       items: [
         {
@@ -179,10 +178,7 @@ export const content = {
           year: "2026",
           description:
             "Curso completo de SQL: desde consultas y filtros hasta subconsultas, CTEs, índices y transacciones, cerrando con el ecosistema de bases de datos y su integración con Node.js.",
-          // Credencial oficial verificable en el dominio del instructor.
-          credential:
-            "https://certificados.midudev.com/81148f98-f18e-4928-b436-0b0cbcf225f19.pdf",
-          // Copia local para que la descarga no dependa de un tercero.
+          // Copia local del PDF, descargable desde el sitio.
           downloadUrl: "/certificado-sql.pdf",
           fileName: "certificado-sql.pdf",
           stats: [
@@ -381,7 +377,6 @@ export const content = {
       title: "Certifications",
       subtitle: "Verifiable credentials that back my technical skills.",
       syllabusLabel: "Syllabus covered",
-      verifyCredential: "View verified credential",
       downloadCredential: "Download PDF",
       items: [
         {
@@ -390,10 +385,7 @@ export const content = {
           year: "2026",
           description:
             "Complete SQL course: from queries and filters to subqueries, CTEs, indexes and transactions, closing with the database ecosystem and its integration with Node.js.",
-          // Official credential, verifiable on the instructor's domain.
-          credential:
-            "https://certificados.midudev.com/81148f98-f18e-4928-b436-0b0cbcf225f19.pdf",
-          // Local copy so the download doesn't depend on a third party.
+          // Local copy of the PDF, downloadable from the site.
           downloadUrl: "/certificado-sql.pdf",
           fileName: "certificado-sql.pdf",
           stats: [

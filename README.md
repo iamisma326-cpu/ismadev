@@ -42,10 +42,10 @@ Casi todo se cambia en **un solo archivo**: `src/data/content.js`.
   cada bloque de idioma.
 - **Foto**: reemplaza `src/assets/isma.png` (mantiene el nombre).
 - **Credenciales**: cada entrada de `certifications.items` admite
-  `credential` (URL oficial verificable), `downloadUrl` + `fileName` (copia
-  local en `public/` para descarga directa), `stats` (cifras del curso) y
-  `topics` (temario real: `{ name, tags }`). Si un certificado no tiene PDF,
-  omite `downloadUrl`/`fileName` y solo queda el enlace de verificación.
+  `downloadUrl` + `fileName` (copia local en `public/` para descarga directa),
+  `stats` (cifras del curso) y `topics` (temario real: `{ name, tags }`). Si un
+  certificado no tiene PDF, omite `downloadUrl`/`fileName` y la tarjeta se
+  muestra sin botón de descarga.
 
 ## Características
 

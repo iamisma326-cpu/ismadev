@@ -168,17 +168,6 @@
   color: var(--accent);
 }
 
-/* Acción secundaria: la descarga del PDF. */
-.cert-link-ghost {
-  color: var(--ink-soft);
-  border-color: transparent;
-}
-
-.cert-link-ghost:hover {
-  color: var(--ink);
-  border-color: var(--line-strong);
-}
-
 /* Temario real del certificado */
 .cert-syllabus {
   border-left: 1px solid var(--line);

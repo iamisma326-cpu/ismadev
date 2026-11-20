@@ -3,11 +3,7 @@ import { content } from "../data/content";
 import { useReveal } from "../hooks/useReveal";
 import SectionWord from "./SectionWord";
 import SectionDecor from "./SectionDecor";
-import {
-  AwardIcon,
-  ArrowUpRightIcon,
-  DownloadIcon,
-} from "./icons";
+import { AwardIcon, DownloadIcon } from "./icons";
 import "./Certifications.css";
 
 export default function Certifications() {
@@ -58,21 +54,10 @@ export default function Certifications() {
                 )}
 
                 <div className="cert-actions">
-                  {/* Credencial oficial: se abre en el dominio del instructor. */}
-                  <a
-                    className="cert-link"
-                    href={cert.credential}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {t.verifyCredential}
-                    <ArrowUpRightIcon width={15} height={15} />
-                  </a>
-
-                  {/* Copia local: baja directo sin abrir pestaña. */}
+                  {/* Copia local del PDF: baja directo sin abrir pestaña. */}
                   {cert.downloadUrl && (
                     <a
-                      className="cert-link cert-link-ghost"
+                      className="cert-link"
                       href={cert.downloadUrl}
                       download={cert.fileName}
                     >
