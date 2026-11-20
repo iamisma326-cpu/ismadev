@@ -168,34 +168,50 @@ export const content = {
       bgWord: "CERTIFICACIONES",
       title: "Certificaciones",
       subtitle:
-        "Formación complementaria que respalda mis habilidades técnicas.",
-      viewCredential: "Ver credencial",
-      downloadCredential: "Descargar credencial",
+        "Credenciales verificables que respaldan mis habilidades técnicas.",
+      syllabusLabel: "Temario cubierto",
+      verifyCredential: "Ver credencial verificada",
+      downloadCredential: "Descargar PDF",
       items: [
         {
-          title: "Desarrollo Web Frontend",
-          issuer: "Plataforma online",
-          year: "2025",
-          credential: "#",
-        },
-        {
-          title: "Fundamentos de Python",
-          issuer: "Curso especializado",
-          year: "2025",
-          credential: "#",
-        },
-        {
-          title: "Programación con Java",
-          issuer: "Curso especializado",
-          year: "2024",
-          credential: "#",
-        },
-        {
-          title: "Bases de Datos MySQL",
-          issuer: "Plataforma online",
-          year: "2024",
-          credential: "/certificado-sql.pdf",
+          title: "Aprende SQL",
+          issuer: "Miguel Ángel Durán · midudev",
+          year: "2026",
+          description:
+            "Curso completo de SQL: desde consultas y filtros hasta subconsultas, CTEs, índices y transacciones, cerrando con el ecosistema de bases de datos y su integración con Node.js.",
+          // Credencial oficial verificable en el dominio del instructor.
+          credential:
+            "https://certificados.midudev.com/81148f98-f18e-4928-b436-0b0cbcf225f19.pdf",
+          // Copia local para que la descarga no dependa de un tercero.
+          downloadUrl: "/certificado-sql.pdf",
           fileName: "certificado-sql.pdf",
+          stats: [
+            { value: "29", label: "Lecciones" },
+            { value: "112", label: "Ejercicios" },
+            { value: "7", label: "Exámenes" },
+          ],
+          topics: [
+            {
+              name: "Consultas y filtros",
+              tags: "SELECT · WHERE · LIKE · IN · ORDER BY",
+            },
+            { name: "Agregación", tags: "COUNT · SUM · GROUP BY · HAVING" },
+            {
+              name: "Estructura de tablas",
+              tags: "CREATE · FOREIGN KEY · INDEX",
+            },
+            {
+              name: "Ventanas y transacciones",
+              tags: "OVER · ROW_NUMBER · COMMIT",
+            },
+            { name: "Uniones y nulos", tags: "INNER JOIN · LEFT JOIN · NULL" },
+            { name: "Manipulación de datos", tags: "INSERT · UPDATE · DELETE" },
+            {
+              name: "Consultas avanzadas",
+              tags: "Subconsultas · UNION · CTE",
+            },
+            { name: "Ecosistema", tags: "SQLite · MySQL · Node.js · NoSQL" },
+          ],
         },
       ],
     },
@@ -363,34 +379,47 @@ export const content = {
       index: "04",
       bgWord: "CERTIFICATIONS",
       title: "Certifications",
-      subtitle: "Complementary training that backs my technical skills.",
-      viewCredential: "View credential",
-      downloadCredential: "Download credential",
+      subtitle: "Verifiable credentials that back my technical skills.",
+      syllabusLabel: "Syllabus covered",
+      verifyCredential: "View verified credential",
+      downloadCredential: "Download PDF",
       items: [
         {
-          title: "Frontend Web Development",
-          issuer: "Online platform",
-          year: "2025",
-          credential: "#",
-        },
-        {
-          title: "Python Fundamentals",
-          issuer: "Specialized course",
-          year: "2025",
-          credential: "#",
-        },
-        {
-          title: "Java Programming",
-          issuer: "Specialized course",
-          year: "2024",
-          credential: "#",
-        },
-        {
-          title: "MySQL Databases",
-          issuer: "Online platform",
-          year: "2024",
-          credential: "/certificado-sql.pdf",
+          title: "Aprende SQL",
+          issuer: "Miguel Ángel Durán · midudev",
+          year: "2026",
+          description:
+            "Complete SQL course: from queries and filters to subqueries, CTEs, indexes and transactions, closing with the database ecosystem and its integration with Node.js.",
+          // Official credential, verifiable on the instructor's domain.
+          credential:
+            "https://certificados.midudev.com/81148f98-f18e-4928-b436-0b0cbcf225f19.pdf",
+          // Local copy so the download doesn't depend on a third party.
+          downloadUrl: "/certificado-sql.pdf",
           fileName: "certificado-sql.pdf",
+          stats: [
+            { value: "29", label: "Lessons" },
+            { value: "112", label: "Exercises" },
+            { value: "7", label: "Exams" },
+          ],
+          topics: [
+            {
+              name: "Queries & filters",
+              tags: "SELECT · WHERE · LIKE · IN · ORDER BY",
+            },
+            { name: "Aggregation", tags: "COUNT · SUM · GROUP BY · HAVING" },
+            {
+              name: "Table structure",
+              tags: "CREATE · FOREIGN KEY · INDEX",
+            },
+            {
+              name: "Windows & transactions",
+              tags: "OVER · ROW_NUMBER · COMMIT",
+            },
+            { name: "Joins & nulls", tags: "INNER JOIN · LEFT JOIN · NULL" },
+            { name: "Data manipulation", tags: "INSERT · UPDATE · DELETE" },
+            { name: "Advanced queries", tags: "Subqueries · UNION · CTE" },
+            { name: "Ecosystem", tags: "SQLite · MySQL · Node.js · NoSQL" },
+          ],
         },
       ],
     },

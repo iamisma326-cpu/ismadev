@@ -7,32 +7,54 @@
 
 .certs-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   gap: 1.25rem;
 }
 
+/* Tarjeta destacada: credencial a la izquierda, temario a la derecha. */
 .cert-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: clamp(1.6rem, 4vw, 3.2rem);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--bg);
-  padding: 1.7rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.55rem;
-  transition: transform 0.35s var(--ease), border-color 0.3s ease,
-    opacity var(--speed) var(--ease);
+  padding: clamp(1.6rem, 3.2vw, 2.5rem);
+  overflow: hidden;
+  transition: border-color 0.3s ease, opacity var(--speed) var(--ease);
+}
+
+/* Filete de acento superior: marca la tarjeta como credencial. */
+.cert-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), transparent 72%);
 }
 
 .cert-card:hover {
-  transform: translateY(-5px);
-  border-color: var(--ink);
+  border-color: var(--line-strong);
+}
+
+/* Sin temario: la tarjeta ocupa una sola columna. */
+.cert-card--solo {
+  grid-template-columns: 1fr;
+}
+
+.cert-main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  min-width: 0;
 }
 
 .cert-head {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 0.5rem;
+  gap: 1rem;
+  margin-bottom: 0.6rem;
 }
 
 /* Medalla en círculo con borde de acento */
@@ -65,11 +87,12 @@
 
 .cert-card h3 {
   font-family: var(--font-display);
-  font-size: 1.3rem;
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
   font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
   margin: 0;
-  color: var(--ink-mid);
+  color: var(--ink-strong);
 }
 
 .cert-issuer {
@@ -78,19 +101,65 @@
   color: var(--ink-soft);
 }
 
+.cert-desc {
+  margin: 0.5rem 0 0;
+  max-width: 42ch;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+
+/* Cifras del curso (lecciones · ejercicios · exámenes) */
+.cert-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(1.4rem, 3vw, 2.4rem);
+  margin: 1.4rem 0 0;
+  padding: 1.15rem 0 0;
+  border-top: 1px solid var(--line);
+}
+
+.cert-stats div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.cert-stats dt {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ink-strong);
+}
+
+.cert-stats dd {
+  margin: 0;
+  font-size: 0.72rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.cert-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.4rem;
+  margin-top: auto;
+  padding-top: 1.7rem;
+}
+
 .cert-link {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  margin-top: auto;
-  padding-top: 0.9rem;
+  padding-bottom: 0.15rem;
   font-family: var(--font-display);
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--ink);
   border-bottom: 1px solid var(--line-strong);
-  padding-bottom: 0.15rem;
-  align-self: flex-start;
   transition: border-color 0.25s ease, color 0.25s ease;
 }
 
@@ -99,8 +168,71 @@
   color: var(--accent);
 }
 
-@media (max-width: 780px) {
-  .certs-grid {
+/* Acción secundaria: la descarga del PDF. */
+.cert-link-ghost {
+  color: var(--ink-soft);
+  border-color: transparent;
+}
+
+.cert-link-ghost:hover {
+  color: var(--ink);
+  border-color: var(--line-strong);
+}
+
+/* Temario real del certificado */
+.cert-syllabus {
+  border-left: 1px solid var(--line);
+  padding-left: clamp(1.2rem, 3vw, 2.2rem);
+  min-width: 0;
+}
+
+.cert-label {
+  display: block;
+  margin-bottom: 1.1rem;
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.cert-syllabus ul {
+  display: grid;
+  gap: 0.85rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cert-syllabus li {
+  display: grid;
+  gap: 0.1rem;
+}
+
+.cert-topic-name {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--ink-mid);
+}
+
+.cert-topic-tags {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.71rem;
+  letter-spacing: 0.04em;
+  color: var(--ink-faint);
+}
+
+@media (max-width: 860px) {
+  .cert-card {
     grid-template-columns: 1fr;
+  }
+
+  .cert-syllabus {
+    border-left: 0;
+    border-top: 1px solid var(--line);
+    padding-left: 0;
+    padding-top: 1.6rem;
   }
 }

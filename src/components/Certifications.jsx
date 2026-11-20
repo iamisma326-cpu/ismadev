@@ -28,39 +28,74 @@ export default function Certifications() {
         <p className="certs-subtitle">{t.subtitle}</p>
 
         <div className="certs-grid">
-          {t.items.map((cert, i) => (
+          {t.items.map((cert) => (
             <article
               key={cert.title}
-              className="cert-card reveal"
-              style={{ transitionDelay: `${(i % 2) * 0.12}s` }}
+              className={`cert-card reveal${cert.topics ? "" : " cert-card--solo"}`}
               ref={observe}
             >
-              <div className="cert-head">
-                <span className="cert-icon">
-                  <AwardIcon width={22} height={22} />
-                </span>
-                <span className="cert-year">{cert.year}</span>
+              <div className="cert-main">
+                <div className="cert-head">
+                  <span className="cert-icon">
+                    <AwardIcon width={22} height={22} />
+                  </span>
+                  <span className="cert-year">{cert.year}</span>
+                </div>
+
+                <h3>{cert.title}</h3>
+                <p className="cert-issuer">{cert.issuer}</p>
+                <p className="cert-desc">{cert.description}</p>
+
+                {cert.stats && (
+                  <dl className="cert-stats">
+                    {cert.stats.map((stat) => (
+                      <div key={stat.label}>
+                        <dt>{stat.value}</dt>
+                        <dd>{stat.label}</dd>
+                      </div>
+                    ))}
+                  </dl>
+                )}
+
+                <div className="cert-actions">
+                  {/* Credencial oficial: se abre en el dominio del instructor. */}
+                  <a
+                    className="cert-link"
+                    href={cert.credential}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {t.verifyCredential}
+                    <ArrowUpRightIcon width={15} height={15} />
+                  </a>
+
+                  {/* Copia local: baja directo sin abrir pestaña. */}
+                  {cert.downloadUrl && (
+                    <a
+                      className="cert-link cert-link-ghost"
+                      href={cert.downloadUrl}
+                      download={cert.fileName}
+                    >
+                      {t.downloadCredential}
+                      <DownloadIcon width={15} height={15} />
+                    </a>
+                  )}
+                </div>
               </div>
 
-              <h3>{cert.title}</h3>
-              <p className="cert-issuer">{cert.issuer}</p>
-
-              <a
-                className="cert-link"
-                href={cert.credential}
-                download={cert.fileName}
-                // Con `download` no se abre una pestaña: el archivo baja
-                // directo. `target` solo aplica a enlaces sin archivo.
-                target={cert.fileName ? undefined : "_blank"}
-                rel="noreferrer"
-              >
-                {cert.fileName ? t.downloadCredential : t.viewCredential}
-                {cert.fileName ? (
-                  <DownloadIcon width={15} height={15} />
-                ) : (
-                  <ArrowUpRightIcon width={15} height={15} />
-                )}
-              </a>
+              {cert.topics && (
+                <div className="cert-syllabus">
+                  <span className="cert-label">{t.syllabusLabel}</span>
+                  <ul>
+                    {cert.topics.map((topic) => (
+                      <li key={topic.name}>
+                        <span className="cert-topic-name">{topic.name}</span>
+                        <span className="cert-topic-tags">{topic.tags}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </article>
           ))}
         </div>

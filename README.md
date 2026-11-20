@@ -27,7 +27,7 @@ src/
 
 public/
 ├── favicon.svg
-└── certificado-sql.pdf    # credencial descargable (cert. MySQL)
+└── certificado-sql.pdf    # credencial descargable (Aprende SQL · midudev)
 ```
 
 ## Cómo editar tu información
@@ -41,9 +41,11 @@ Casi todo se cambia en **un solo archivo**: `src/data/content.js`.
 - **Proyectos, habilidades, educación y stats del hero**: listas dentro de
   cada bloque de idioma.
 - **Foto**: reemplaza `src/assets/isma.png` (mantiene el nombre).
-- **Credenciales**: para que un certificado se descargue, pon su archivo en
-  `public/` y en `content.js` usa `credential: "/archivo.pdf"` más
-  `fileName: "archivo.pdf"`. Con `credential: "#"` no hay archivo asociado.
+- **Credenciales**: cada entrada de `certifications.items` admite
+  `credential` (URL oficial verificable), `downloadUrl` + `fileName` (copia
+  local en `public/` para descarga directa), `stats` (cifras del curso) y
+  `topics` (temario real: `{ name, tags }`). Si un certificado no tiene PDF,
+  omite `downloadUrl`/`fileName` y solo queda el enlace de verificación.
 
 ## Características
 
